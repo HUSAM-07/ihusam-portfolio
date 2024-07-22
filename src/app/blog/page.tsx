@@ -1,6 +1,9 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { getBlogPosts } from "@/data/blog";
 import Link from "next/link";
+// For named export
+import { formatDate } from "@/lib/utils";
+
 
 export const metadata = {
   title: "Blog",
