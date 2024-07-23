@@ -98,7 +98,7 @@ export const DATA = {
         "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
     },
     {
-      company: "Nvidia",
+      company: "Brio",
       href: "https://www.briotech.com/",
       badges: [],
       location: "Hyderabad, India",
