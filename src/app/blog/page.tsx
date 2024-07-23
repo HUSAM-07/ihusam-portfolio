@@ -4,18 +4,6 @@ import Link from "next/link";
 import { formatDate } from "@/lib/utils"; // Correctly import the named export
 import { getPost } from "@/data/blog";
 
-// Assuming getPost returns a post object with a date property
-const BlogPostPage = async ({ params }) => {
-  const post = await getPost(params.slug);
-
-  return (
-    <div>
-      <h1>{post.title}</h1>
-      <p>{formatDate(new Date(post.date))}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
-    </div>
-  );
-};
 
 export const metadata = {
   title: "Blog",
