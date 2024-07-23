@@ -107,7 +107,7 @@ export const DATA = {
       start: "July 2024",
       end: "Present",
       description:
-        "Architected and wrote the entire MVP of the Internal Cloud Price Calculator and A/B testing dashboard using React, Redux, TypeScript, Streamlit and Python.",
+        "Architected and wrote the entire MVP of the Internal Cloud Price Calculator and A/B testing dashboard using React, TypeScript, Streamlit and Python.",
     },
     {
       company: "Splunk",
