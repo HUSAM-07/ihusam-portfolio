@@ -1,6 +1,6 @@
 # Intention
 
-- Wanted a NextJs based website to communicate myself and my experiances with the world
+- A NextJs & Typescript based website to communicate myself and my experiances with the world.
 
 ## Website is Live!
 
