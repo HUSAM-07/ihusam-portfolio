@@ -3,10 +3,10 @@ import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
 
 export const DATA = {
   name: "Husam",
-  initials: "DV",
+  initials: "MHD",
   url: "https://dillion.io",
   location: "Dubai, U.A.E",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  locationLink: "https://www.google.com/maps/place/Dubai",
   description:
     "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
   summary:
