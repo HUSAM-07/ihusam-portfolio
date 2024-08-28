@@ -1,0 +1,46 @@
+# Website Technical Documentation
+
+## Overview
+This website is built using Next.js, a React framework for server-side rendering and static site generation.
+
+## Key Components
+
+### Blog System
+- Located in `src/app/blog/[slug]/page.tsx`
+- Uses dynamic routing to generate individual blog post pages
+- Blog posts are likely stored as Markdown files in a `content/blog/` directory
+
+### Data Fetching
+- Blog post data is fetched using a `getPost` function from `@/data/blog`
+- This function should read Markdown files and return structured data
+
+### Metadata
+- Each blog post should include metadata (title, publishedAt, summary, etc.)
+- Metadata is used for SEO optimization and page rendering
+
+## Publishing Process
+1. Write blog posts in Markdown format
+2. Add necessary metadata to each post
+3. Place new posts in the designated content folder
+4. Rebuild and redeploy the site to generate new static pages
+
+## Development
+- Use `npm run dev` or `yarn dev` to start the development server
+- Make changes to components in the `src/` directory
+- Test changes locally before deploying
+
+## Deployment
+- Build the project using `npm run build` or `yarn build`
+- Deploy the resulting build to your hosting platform of choice
+
+## SEO Optimization
+- Utilizes Next.js built-in SEO features
+- Custom metadata is set for each blog post
+
+## Styling
+- Likely uses CSS modules or a CSS-in-JS solution (confirm based on project structure)
+
+## Future Improvements
+- Implement a CMS for easier content management
+- Add a search functionality for blog posts
+- Implement pagination for the blog list page
