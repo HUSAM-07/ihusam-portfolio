@@ -107,10 +107,10 @@ export default async function Blog({
             return (
               <Image
                 key={index}
-                src={item.src || ''}  // Provide a default empty string if src is undefined
+                src={item.src || ''}
                 alt={item.alt || ''}
-                width={item.width || 800} // Provide a default width
-                height={item.height || 600} // Provide a default height
+                width={item.width || 800}
+                height={item.height || 600}
                 layout="responsive"
               />
             );
