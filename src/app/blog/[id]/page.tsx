@@ -102,12 +102,12 @@ export default async function Blog({
       <article className="prose dark:prose-invert">
         {parsedContent.map((item, index) => {
           if (item.type === 'text') {
-            return <div key={index} dangerouslySetInnerHTML={{ __html: item.content }} />;
+            return <div key={index} dangerouslySetInnerHTML={{ __html: item.content ?? '' }} />;
           } else if (item.type === 'image') {
             return (
               <Image
                 key={index}
-                src={item.src}
+                src={item.src || ''}  // Provide a default empty string if src is undefined
                 alt={item.alt || ''}
                 width={item.width || 800} // Provide a default width
                 height={item.height || 600} // Provide a default height
