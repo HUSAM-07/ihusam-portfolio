@@ -4,6 +4,8 @@ import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import Image from 'next/image';
+import { parseContent } from '@/lib/contentParser'; 
 
 export async function generateMetadata({
   params,
@@ -63,6 +65,8 @@ export default async function Blog({
     notFound();
   }
 
+  const parsedContent = parseContent(post.content);
+
   return (
     <section id="blog">
       <script
@@ -95,10 +99,24 @@ export default async function Blog({
           </p>
         </Suspense>
       </div>
-      <article
-        className="prose dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: post.content }}
-      ></article>
+      <article className="prose dark:prose-invert">
+        {parsedContent.map((item, index) => {
+          if (item.type === 'text') {
+            return <div key={index} dangerouslySetInnerHTML={{ __html: item.content }} />;
+          } else if (item.type === 'image') {
+            return (
+              <Image
+                key={index}
+                src={item.src}
+                alt={item.alt || ''}
+                width={item.width || 800} // Provide a default width
+                height={item.height || 600} // Provide a default height
+                layout="responsive"
+              />
+            );
+          }
+        })}
+      </article>
     </section>
   );
 }
