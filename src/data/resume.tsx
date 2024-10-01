@@ -171,21 +171,54 @@ export const DATA = {
         "",
     },
     {
-      title: "IHSSRC",
-      href: "https://www.ihssrc2024.com/",
-      dates: "June 2023 - Present",
+      title: "UniDash-A personal initiative",
+      href: "https://unidash.mohammedhusamuddin.me/",
+      dates: "July 2024 - Present",
       active: true,
       description:
-        "Designed, developed and consulted a conference website for the Humanities Department of BITS Pilani Dubai.",
+        "Designed and Developed a Web App for the students of BITS Pilani Dubai to view their courses, university portals, track attendance, view career services guidance.",
       technologies: [
         "Next.js",
         "Typescript",
-        "PostgreSQL",
+        "NodeJs",
+        "Firebase",
         "Prisma",
         "TailwindCSS",
         "Stripe",
         "Shadcn UI",
         "Magic UI",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://unidash.mohammedhusamuddin.me/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/HUSAM-07/AccessX",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: {
+        src: "/UniDash_Thumbnail.png",
+        width: 1200,
+        height: 630,
+      },
+      video: "",
+    },
+    {
+      title: "IHSSRC(Now ICMSDG)",
+      href: "https://www.icmsdg2025.com/",
+      dates: "June 2023 - Present",
+      active: true,
+      description:
+        "Designed, developed and consulted a conference website for the Humanities Department of BITS Pilani Dubai.",
+      technologies: [
+        "Figma",
+        "Wix Studio",
+        "Google Analytics",
+        "Domain Registration"
       ],
       links: [
         {
