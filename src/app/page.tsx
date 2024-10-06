@@ -68,7 +68,11 @@ export default function Page() {
                 href={work.href}
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
-                description={work.description}
+                description={Array.isArray(work.description) 
+                  ? work.description.join(' ').replace(/[.,]/g, '') 
+                  : typeof work.description === 'string' 
+                    ? work.description.replace(/[.,]/g, '')
+                    : undefined}
               />
             </BlurFade>
           ))}
@@ -176,6 +180,18 @@ export default function Page() {
             </div>
           </BlurFade>
         </div>
+      </section>
+      <section id="resume-link" className="mx-auto w-full max-w-2xl">
+        <BlurFade delay={BLUR_FADE_DELAY * 2}>
+          <Link 
+            href="/Mohammed Husamuddin Resume.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            View My Resume
+          </Link>
+        </BlurFade>
       </section>
     </main>
   );

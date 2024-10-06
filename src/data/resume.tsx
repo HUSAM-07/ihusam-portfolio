@@ -84,7 +84,7 @@ export const DATA = {
       start: "May 2021",
       end: "Oct 2022",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Engineered data pipeline using Python and regex, cleaning web-scraped data and reducing manual entry by 73%, while developing a reusable UI component library that boosted developer productivity by 40% andimproved system architecture, resulting in increase in UI consistency and flow efficiency",
     },
     {
       company: "Google Developer Student Clubs",
@@ -95,8 +95,10 @@ export const DATA = {
       logoUrl: "/gdsc.png",
       start: "August 2023",
       end: "Present",
-      description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+      description: [
+        "Expanded chapter to largest campus community (350+ members), managing 26-person team across 5 departments, implementing 3-tier structure, and overseeing 903+ student participations and certifications.",
+        "Developed and directed 4 internal and community applications/tools and 40+ long-term assets including automated scripts and internal web apps, increasing website traffic by 73% and documenting processes through SoP initiatives.",
+      ],
     },
     {
       company: "Brio",
@@ -107,8 +109,11 @@ export const DATA = {
       logoUrl: "/brio.jpg",
       start: "July 2024",
       end: "Present",
-      description:
-        "Architected and wrote the entire MVP of the Internal Cloud Price Calculator and A/B testing dashboard using React, TypeScript, Streamlit and Python.",
+      description: [
+        "Developed a Cloud Pricing Calculator that facilitated easy comparison of migration costs across cloud platforms, utilizing Azure API integration, Python web frameworks (Streamlit), and data analysis.",
+        "Built a full-stack Sales Lead Email Generation Application that automated 80% of the lead generation process, increasing sales team productivity by 40%, utilizing LinkedIn's Rapid API, GPT-4 integration, and Streamlit (now converting codebase to React) for a responsive front-end.",
+        "Integrated Google Cloud Platform service accounts into the applications developed, enabling seamless and secure access to Google Cloud services without user intervention, learned how to proficiently practice cloud security, IAM policies, and programmatic authentication in production environments.",
+      ],
     },
   ],
   education: [
@@ -148,12 +153,60 @@ export const DATA = {
       description:
         "A website to get the support you need to ace your math courses with expertly crafted video lectures, practice problems, and other resources.",
       technologies: [
+        // Languages
+        "Python",
+        "Java",
+        "C++",
+        "Matlab",
+        "SQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "Assembly x86-64",
+
+        // Frameworks & Libraries
+        "Matplotlib",
+        "Pandas",
+        "Streamlit",
+        "TensorFlow",
+        "NumPy",
+        "Flask",
+        "BeautifulSoup",
+        "Scikit-Learn",
+        "OpenCV",
+        "Flower (Federated Learning)",
+        "Shadcn UI",
+        "Taipy",
+        "ROSpy",
+        "OpenAI",
+        "Hugging Face",
+        "Google-Auth",
+        "Google Maps API",
+        "MkDocs",
+
+        // Tools & Technologies
         "Next.js",
-        "Typescript",
-        "PostgreSQL",
+        "React",
+        "Node.js",
+        "MySQL",
+        "Firebase",
+        "Vercel",
+        "Heroku",
+        "Git",
+        "Google Cloud Platform",
+        "Azure",
+        "AWS",
+        "Figma",
+        "REST",
+        "Docker",
+        "Linux",
+        "VS Code",
         "Prisma",
-        "TailwindCSS",
-        "Stripe",
+        "Notion",
+        "Power BI",
+        "Tableau",
+        "Linear",
       ],
       links: [
         {
