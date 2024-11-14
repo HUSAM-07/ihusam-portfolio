@@ -286,6 +286,42 @@ export const DATA = {
       video: "",
     },
     {
+      title: "Hala Dubai",
+      href: "https://hala-dubai.vercel.app/",
+      dates: "November 2024 - Present",
+      active: true,
+      description:
+        "A new way to collect and explore Dubai.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "NodeJs",
+        "Firebase",
+        "Prisma",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Magic UI",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://hala-dubai.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/HUSAM-07/Hala-Dubai",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: {
+        src: "/haladubai.png",
+        width: 1200,
+        height: 630,
+      },
+      video: "",
+    },
+    {
       title: "Security Compliance Dashboard",
       href: "https://www.behance.net/gallery/168506855/Security-Compliance-Dashboard",
       dates: "April 2023 - September 2023",
