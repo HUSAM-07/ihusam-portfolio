@@ -3,7 +3,12 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Github, RefreshCw } from 'lucide-react'
+import { ArrowLeft, Github, RefreshCw, Terminal } from 'lucide-react'
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert"
 
 const puns = [
   "Looks like this page is on a coffee break. It's been a latte since we've seen it!",
@@ -47,6 +52,13 @@ export default function NotFound() {
       <div className="space-y-6 max-w-md">
         <h1 className="text-6xl font-bold text-primary animate-bounce">404</h1>
         <h2 className="text-2xl font-semibold text-foreground">Page Not Found</h2>
+        <Alert>
+          <Terminal className="h-4 w-4" />
+          <AlertTitle>Heads up!</AlertTitle>
+          <AlertDescription>
+            The projects page is currently under construction. Please check back later, Find the Projects on GitHub.
+          </AlertDescription>
+        </Alert>
         <p className="text-muted-foreground">
           {pun}
         </p>
