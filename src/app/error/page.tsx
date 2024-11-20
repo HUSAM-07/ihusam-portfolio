@@ -12,7 +12,23 @@ const puns = [
   "Houston, we have a problem. This page seems to have floated off into space.",
   "Knock knock. Who's there? Not this page!",
   "This page is like my code without coffee - it just doesn't exist.",
-]
+  "404: This page is like a cat—it comes and goes as it pleases!",
+  "Oops! This page ran out for tacos. You should too.",
+  "404: This page went to Hogwarts and forgot to return.",
+  "Looks like this page got stuck in the Upside Down. Hang tight!",
+  "Error 404: This page is as elusive as Bigfoot.",
+  "This page took a wrong turn at the Internet crossroads.",
+  "404: Like a magician's trick, this page disappeared!",
+  "Oops! This page is buffering... forever.",
+  "This page is like your keys—always lost when you need it.",
+  "404: Looks like this page joined a band and went on tour!",
+  "Error: This page is on a digital coffee run.",
+  "404: This page moonwalked out of existence.",
+  "Looks like this page went to the Matrix and took the wrong pill.",
+  "Oops! This page is on vacation—permanently.",
+  "404: This page is practicing social distancing. Stay safe!",
+];
+
 
 export default function NotFound() {
   const [pun, setPun] = useState('')
@@ -46,7 +62,7 @@ export default function NotFound() {
             </Link>
           </Button>
           <Button asChild variant="outline">
-            <Link href="https://github.com/yourusername" className="inline-flex items-center" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/HUSAM-07" className="inline-flex items-center" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-4 w-4" />
               View Projects on GitHub
             </Link>
