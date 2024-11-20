@@ -1,32 +1,58 @@
-import Link from 'next/link';
+'use client'
+
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { Button } from "@/components/ui/button"
+import { ArrowLeft, Github, RefreshCw } from 'lucide-react'
+
+const puns = [
+  "Looks like this page is on a coffee break. It's been a latte since we've seen it!",
+  "404: Page not found. Looks like it's playing hide and seek!",
+  "Oops! This page has gone to explore the digital wilderness.",
+  "Houston, we have a problem. This page seems to have floated off into space.",
+  "Knock knock. Who's there? Not this page!",
+  "This page is like my code without coffee - it just doesn't exist.",
+]
 
 export default function NotFound() {
+  const [pun, setPun] = useState('')
+
+  const getRandomPun = () => {
+    const randomIndex = Math.floor(Math.random() * puns.length)
+    setPun(puns[randomIndex])
+  }
+
+  useEffect(() => {
+    getRandomPun()
+  }, [])
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4 sm:p-6 md:p-8">
-      <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
-        <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-          <div className="p-3 sm:p-4 bg-gray-700 flex items-center space-x-2">
-            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
-            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
-            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
-            <div className="flex-grow text-center text-xs sm:text-sm font-mono">404</div>
-          </div>
-          <div className="p-6 sm:p-8">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 sm:mb-4">404</h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 sm:mb-4">No Navbars here</h2>
-            <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-400">
-              The page you are looking for doesn&apos;t exist or has been moved.
-              Continue your search for any details from the homepage.
-            </p>
-            <Link 
-              href="/"
-              className="inline-block bg-white text-gray-900 font-semibold py-2 px-4 rounded hover:bg-gray-200 transition duration-300 text-sm sm:text-base"
-            >
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center bg-background">
+      <div className="space-y-6 max-w-md">
+        <h1 className="text-6xl font-bold text-primary animate-bounce">404</h1>
+        <h2 className="text-2xl font-semibold text-foreground">Page Not Found</h2>
+        <p className="text-muted-foreground">
+          {pun}
+        </p>
+        <Button variant="outline" size="sm" onClick={getRandomPun} className="mt-2">
+          <RefreshCw className="mr-2 h-4 w-4" />
+          New Pun
+        </Button>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4">
+          <Button asChild variant="default">
+            <Link href="/" className="inline-flex items-center">
+              <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Home
             </Link>
-          </div>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="https://github.com/yourusername" className="inline-flex items-center" target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-4 w-4" />
+              View Projects on GitHub
+            </Link>
+          </Button>
         </div>
       </div>
     </div>
-  );
+  )
 }
