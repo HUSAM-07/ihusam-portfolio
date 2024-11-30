@@ -23,7 +23,7 @@ export const Icons = {
       />
     </svg>
   ),
-  youtube: (props: IconProps) => (
+  newsletter: (props: IconProps) => (
     <svg
       width="32px"
       height="32px"
@@ -32,8 +32,9 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>youtube</title>
-      <path d="M29.41,9.26a3.5,3.5,0,0,0-2.47-2.47C24.76,6.2,16,6.2,16,6.2s-8.76,0-10.94.59A3.5,3.5,0,0,0,2.59,9.26,36.13,36.13,0,0,0,2,16a36.13,36.13,0,0,0,.59,6.74,3.5,3.5,0,0,0,2.47,2.47C7.24,25.8,16,25.8,16,25.8s8.76,0,10.94-.59a3.5,3.5,0,0,0,2.47-2.47A36.13,36.13,0,0,0,30,16,36.13,36.13,0,0,0,29.41,9.26ZM13.2,20.2V11.8L20.47,16Z" />
+      <title>Newsletter</title>
+      <path d="M12 7v14"/>
+      <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
     </svg>
   ),
   nextjs: (props: IconProps) => (

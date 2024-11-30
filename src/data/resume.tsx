@@ -9,9 +9,9 @@ export const DATA = {
   location: "Dubai, U.A.E",
   locationLink: "https://www.google.com/maps/place/Dubai",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "Software Engineer. I love building things and helping people. Very active on Twitter.",
   summary:
-    "I am an undergraduate computer science engineering student and a freelance software engineer. My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take great care in the experience, architecture, and code quality of the things I build. I am also an open-source enthusiast and maintainer. I love how collaboration and knowledge sharing happens through open-source and I am happy to see what I do could eventually feedback to the community and industry",
+    "I am acomputer science engineering student and a freelance software engineer. My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take great care in the experience, architecture, and code quality of the things I build.",
   avatarUrl: "/me.jpg",
   skills: [
     // Languages
@@ -100,10 +100,10 @@ export const DATA = {
 
         navbar: true,
       },
-      Youtube: {
-        name: "Youtube",
+      Newsletter: {
+        name: "Newsletter",
         url: "https://valuevault.beehiiv.com/",
-        icon: Icons.youtube,
+        icon: Icons.newsletter,
         navbar: true,
       },
       email: {
