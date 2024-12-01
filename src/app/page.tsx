@@ -46,7 +46,7 @@ export default function Page() {
         <Link href="https://unidash.mohammedhusamuddin.me/" className="block w-full">
           <RainbowButton className="w-full">
             <Sparkle className="mr-2 size-4" />
-            Launching UniDash - A Student Dashboard for BITS Pilani Dubai
+            Launching UniDash
           </RainbowButton>
         </Link>
       </BlurFade>
