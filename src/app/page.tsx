@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import { Sparkle } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -39,6 +41,16 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <BlurFade delay={BLUR_FADE_DELAY * 2}>
+        <Link href="https://unidash.mohammedhusamuddin.me/" className="block w-full">
+          <RainbowButton className="w-full">
+            <Sparkle className="mr-2 size-4" />
+            Launching UniDash - A Student Dashboard for BITS Pilani Dubai
+          </RainbowButton>
+        </Link>
+      </BlurFade>
+
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
