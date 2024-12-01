@@ -11,7 +11,7 @@ export const DATA = {
   description:
     "Software Engineer. I love building things and helping people.",
   summary:
-    "I am a computer science engineering student and a freelance software engineer. My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take great care in the experience, architecture, and code quality of the things I build.",
+    "I am a computer science engineering student and a [freelance software engineer](#/projects). I interned at [Brio Technologies](#/work) and [PropReturns](#/work) as a Software Engineering and Data Science Intern. My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take great care in the experience, architecture, and code quality of the things I build.",
   avatarUrl: "/me.jpg",
   skills: [
     // Languages
