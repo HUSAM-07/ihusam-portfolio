@@ -9,7 +9,7 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import { Sparkle } from "lucide-react";
+import { Sparkle, PencilLine, Mail } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -49,6 +49,23 @@ export default function Page() {
             Launching UniDash
           </RainbowButton>
         </Link>
+      </BlurFade>
+
+      <BlurFade delay={BLUR_FADE_DELAY * 2.5}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Link href="/Mohammed Husamuddin Resume.pdf" className="block w-full">
+            <RainbowButton className="w-full">
+              <PencilLine className="mr-2 size-4" />
+              View Resume
+            </RainbowButton>
+          </Link>
+          <Link href={`mailto:${DATA.contact.email}`} className="block w-full">
+            <RainbowButton className="w-full">
+              <Mail className="mr-2 size-4" />
+              Say Hi!
+            </RainbowButton>
+          </Link>
+        </div>
       </BlurFade>
 
       <section id="about">
