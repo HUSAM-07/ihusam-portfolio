@@ -151,7 +151,7 @@ export const DATA = {
       title: "Software Engineering Intern",
       logoUrl: "/brio.jpg",
       start: "July 2024",
-      end: "Present",
+      end: "August 2024",
       description: [
         "Developed a Cloud Pricing Calculator that facilitated easy comparison of migration costs across cloud platforms, utilizing Azure API integration, Python web frameworks (Streamlit), and data analysis.",
         "Built a full-stack Sales Lead Email Generation Application that automated 80% of the lead generation process, increasing sales team productivity by 40%, utilizing LinkedIn's Rapid API, GPT-4 integration, and Streamlit (now converting codebase to React) for a responsive front-end.",
