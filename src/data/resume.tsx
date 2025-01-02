@@ -118,32 +118,6 @@ export const DATA = {
 
   work: [
     {
-      company: "PropReturns",
-      href: "https://www.propreturns.com/",
-      badges: [],
-      location: "Remote",
-      title: "Full Stack & Data Science Engineer",
-      logoUrl: "/propreturns.jpg",
-      start: "May 2021",
-      end: "Oct 2022",
-      description:
-        "Engineered data pipeline using Python and regex, cleaning web-scraped data and reducing manual entry by 73%, while developing a reusable UI component library that boosted developer productivity by 40% andimproved system architecture, resulting in increase in UI consistency and flow efficiency",
-    },
-    {
-      company: "Google Developer Student Clubs",
-      badges: [],
-      href: "https://developers.google.com/",
-      location: "Remote",
-      title: "Lead",
-      logoUrl: "/gdsc.png",
-      start: "August 2023",
-      end: "Present",
-      description: [
-        "Expanded chapter to largest campus community (350+ members), managing 26-person team across 5 departments, implementing 3-tier structure, and overseeing 903+ student participations and certifications.",
-        "Developed and directed 4 internal and community applications/tools and 40+ long-term assets including automated scripts and internal web apps, increasing website traffic by 73% and documenting processes through SoP initiatives.",
-      ],
-    },
-    {
       company: "Brio",
       href: "https://www.briotech.com/",
       badges: [],
@@ -156,6 +130,47 @@ export const DATA = {
         "Developed a Cloud Pricing Calculator that facilitated easy comparison of migration costs across cloud platforms, utilizing Azure API integration, Python web frameworks (Streamlit), and data analysis.",
         "Built a full-stack Sales Lead Email Generation Application that automated 80% of the lead generation process, increasing sales team productivity by 40%, utilizing LinkedIn's Rapid API, GPT-4 integration, and Streamlit (now converting codebase to React) for a responsive front-end.",
         "Integrated Google Cloud Platform service accounts into the applications developed, enabling seamless and secure access to Google Cloud services without user intervention, learned how to proficiently practice cloud security, IAM policies, and programmatic authentication in production environments.",
+      ],
+    },
+    {
+      company: "PropReturns",
+      href: "https://www.propreturns.com/",
+      badges: [],
+      location: "Remote",
+      title: "Full Stack & Data Science Engineer",
+      logoUrl: "/propreturns.jpg",
+      start: "June 2023",
+      end: "Aug 2023",
+      description:
+        "Engineered data pipeline using Python and regex, cleaning web-scraped data and reducing manual entry by 73%, while developing a reusable UI component library that boosted developer productivity by 40% andimproved system architecture, resulting in increase in UI consistency and flow efficiency",
+    },
+    {
+      company: "Google Developer Student Clubs",
+      badges: [],
+      href: "https://developers.google.com/",
+      location: "On-Site",
+      title: "Lead",
+      logoUrl: "/gdsc.png",
+      start: "Aug 2023",
+      end: "Sep 2024",
+      description: [
+        "Expanded chapter to largest campus community (350+ members), managing 26-person team across 5 departments, implementing 3-tier structure, and overseeing 903+ student participations and certifications.",
+        "Developed and directed 4 internal and community applications/tools and 40+ long-term assets including automated scripts and internal web apps, increasing website traffic by 73% and documenting processes through SoP initiatives.",
+      ],
+    },
+    {
+      company: "Styx (B2B SaaS StartUp)",
+      badges: [],
+      href: "https://getstyx.io/",
+      location: "On-Site",
+      title: "Lead",
+      logoUrl: "/getstyx.jpg",
+      start: "June 2023",
+      end: "Jan 2024",
+      description: [
+        "Designed and developed a security compliance dashboard MVP, increasing valuation by 27% and gaining stakeholders approval.",
+        "Analyzed financial and operational metrics to identify cost-saving opportunities and recommend strategies for revenue growth",
+        "Pitched product to local and international investors & presented unit economics(CLV or LTV) and market analysis to stakeholders, contributing to securing $500,000 in funding, while developing strategies to improve market penetration",
       ],
     },
   ],
@@ -189,27 +204,31 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Prof Priti Bajpai.com",
-      href: "https://www.profpritibajpai.com/",
-      dates: "May 2023 - June 2023",
+      title: "Image Processing for Crack Detection using XFEM, Machine Learning & Deep Learning Techniques",
+      href: "https://github.com/HUSAM-07/DL-Image-Processing-Crack-Detection",
+      dates: "August 2024 - Jan 2025",
       active: true,
       description:
-        "A website to get the support you need to ace your math courses with expertly crafted video lectures, practice problems, and other resources.",
+        "Engineered XFEM-based datasets with diverse defect configurations and trained VGG16 CNN models using transfer learning and supervised techniques to construct crack paths, achieving high accuracy while reducing computational costs of simulations",
       technologies: [
-        "Figma",
-        "Wix Studio",
-        "Google Analytics",
-        "Domain Registration"
+        "Python",
+        "Abaqus CAE",
+        "XFEM",
+        "Deep Learning",
+        "CNN",
+        "VGG-16",
+        "Reinforcement Learning",
+        "Machine Learning"
       ],
       links: [
         {
-          type: "Website",
-          href: "https://www.profpritibajpai.com/",
+          type: "GitHub",
+          href: "https://github.com/HUSAM-07/DL-Image-Processing-Crack-Detection",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: {
-        src: "/priti.png",
+        src: "/Image_CNN.png",
         width: 1200,
         height: 630,
       },
@@ -217,12 +236,12 @@ export const DATA = {
         "",
     },
     {
-      title: "UniDash-A personal initiative",
+      title: "UniDash — Founder & Developer",
       href: "https://unidash.mohammedhusamuddin.me/",
       dates: "July 2024 - Present",
       active: true,
       description:
-        "Designed and Developed a Web App for the students of BITS Pilani Dubai to view their courses, university portals, track attendance, view career services guidance.",
+        "Founded and developed UniDash, a student-centric All-in-One platform using that achieved an average of 2100+ daily active users.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -252,6 +271,34 @@ export const DATA = {
         height: 630,
       },
       video: "",
+    },
+    {
+      title: "Prof Priti Bajpai.com",
+      href: "https://www.profpritibajpai.com/",
+      dates: "May 2023 - June 2023",
+      active: true,
+      description:
+        "A website to get the support you need to ace your math courses with expertly crafted video lectures, practice problems, and other resources.",
+      technologies: [
+        "Figma",
+        "Wix Studio",
+        "Google Analytics",
+        "Domain Registration"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.profpritibajpai.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: {
+        src: "/priti.png",
+        width: 1200,
+        height: 630,
+      },
+      video:
+        "",
     },
     {
       title: "IHSSRC(Now ICMSDG)",
@@ -372,6 +419,35 @@ export const DATA = {
       ],
       image: {
         src: "/genetic.png",
+        width: 1200,
+        height: 630,
+      },
+      video:
+        "",
+    },
+    {
+      title: "Mohammed Faiyazuddin.com",
+      href: "https://mfu-portfolio-prod.vercel.app/",
+      dates: "December 2024 - Jan 2025",
+      active: true,
+      description:
+        "A Portfolio Site for Mohammed Faiyazuddin — a MEP Specialist & Strategic Business Leader in Dubai, UAE",
+      technologies: [
+        "ReactJs",
+        "NextJs",
+        "Once UI",
+        "Vercel",
+        "Git"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://mfu-portfolio-prod.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: {
+        src: "/mfu-thumbnail.png",
         width: 1200,
         height: 630,
       },
