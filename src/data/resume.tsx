@@ -387,7 +387,7 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "https://www.behance.net/gallery/168506855/Security-Compliance-Dashboard",
+          href: "https://getstyx.io/",
           icon: <Icons.github className="size-3" />,
         },
       ],
