@@ -163,7 +163,7 @@ export const DATA = {
       badges: [],
       href: "https://getstyx.io/",
       location: "On-Site",
-      title: "Lead",
+      title: "Founders Office & Business Strategy Analyst",
       logoUrl: "/getstyx.jpg",
       start: "June 2023",
       end: "Jan 2024",
