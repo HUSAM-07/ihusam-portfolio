@@ -118,6 +118,19 @@ export const DATA = {
 
   work: [
     {
+      company: "Deriv",
+      href: "https://www.deriv.com/",
+      badges: [],
+      location: "Dubai, UAE",
+      title: "AI Engineer",
+      logoUrl: "/deriv.jpg",
+      start: "February 2025",
+      end: "Present",
+      description: [
+        "Working on building AI tools & agents for the internal teams. To solve problems, optimize existing procedures and make it more convenient for internal teams to deliver high-quality results.",
+      ],
+    },
+    {
       company: "Brio",
       href: "https://www.briotech.com/",
       badges: [],
