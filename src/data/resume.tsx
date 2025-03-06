@@ -412,26 +412,33 @@ export const DATA = {
       video: "",
     },
     {
-      title: "TSP Visualizer",
-      href: "genetic.streamlit.app",
-      dates: "April 2023 - March 2024",
+      title: "WRKForce",
+      href: "https://www.wrkforceae.com/",
+      dates: "January 2025 - Present",
       active: true,
       description:
-        "Demo of genetic algorithm solver for the Traveling Salesman Problem.",
+        "Find live and active internships in U.A.E",
       technologies: [
-        "Streamlit",
-        "Python",
-        "Pandas"
+        "Next.js",
+        "Typescript",
+        "Clerk",
+        "Stripe",
+        "NodeJs",
+        "Firebase",
+        "Sanity",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Magic UI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://genetic.streamlit.app/",
+          href: "https://www.wrkforceae.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: {
-        src: "/genetic.png",
+        src: "/wrkforce.png",
         width: 1200,
         height: 630,
       },
