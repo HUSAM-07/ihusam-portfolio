@@ -440,7 +440,7 @@ export const DATA = {
     },
     {
       title: "Mohammed Faiyazuddin.com",
-      href: "https://mfu-portfolio-prod.vercel.app/",
+      href: "https://www.mohammedfaiyazuddin.me/",
       dates: "December 2024 - Jan 2025",
       active: true,
       description:
