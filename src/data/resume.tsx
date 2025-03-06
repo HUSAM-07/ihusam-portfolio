@@ -462,7 +462,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://mfu-portfolio-prod.vercel.app/",
+          href: "https://www.mohammedfaiyazuddin.me/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
