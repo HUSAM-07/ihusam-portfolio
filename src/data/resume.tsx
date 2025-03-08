@@ -16,7 +16,6 @@ export const DATA = {
   skills: [
     // Languages
     "Python",
-    "Java",
     "C++",
     "Matlab",
     "SQL",
