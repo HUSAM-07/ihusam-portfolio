@@ -71,7 +71,7 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "https://ihusam.tech/", icon: NotebookIcon, label: "Blog" },
-    { href: "/error", icon: CodeIcon, label: "Projects" },
+    { href: "https://projects.ihusam.tech/", icon: CodeIcon, label: "Projects" },
     { href: "/Mohammed Husamuddin Resume.pdf", icon: PencilLine, label: "Resume" },
   ],
   contact: {
