@@ -285,6 +285,71 @@ export const DATA = {
       video: "",
     },
     {
+      title: "WRKForce",
+      href: "https://www.wrkforceae.com/",
+      dates: "January 2025 - Present",
+      active: true,
+      description:
+        "Find live and active internships in U.A.E",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "Clerk",
+        "Stripe",
+        "NodeJs",
+        "Firebase",
+        "Sanity",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Magic UI",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.wrkforceae.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: {
+        src: "/wrkforce.png",
+        width: 1200,
+        height: 630,
+      },
+      video:
+        "",
+    },
+    {
+      title: "Insight Hedge",
+      href: "https://insight-hedge.ihusam.tech/",
+      dates: "March 2025 - Present",
+      active: true,
+      description:
+        "An AI-powered hedge fund analysis application built with Next.js and LangChain.js.",
+      technologies: [
+        "OpenAI Agents SDK",
+        "NextJs",
+        "Langchain",
+        "LangGraph",
+        "FastAPI",
+        "Polygon API",
+        "Python",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://insight-hedge.ihusam.tech/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: {
+        src: "/images/insight-hedge.png",
+        width: 1200,
+        height: 630,
+      },
+      video:
+        "",
+    },
+    {
       title: "Prof Priti Bajpai.com",
       href: "https://www.profpritibajpai.com/",
       dates: "May 2023 - June 2023",
@@ -409,71 +474,6 @@ export const DATA = {
         height: 630,
       },
       video: "",
-    },
-    {
-      title: "WRKForce",
-      href: "https://www.wrkforceae.com/",
-      dates: "January 2025 - Present",
-      active: true,
-      description:
-        "Find live and active internships in U.A.E",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "Clerk",
-        "Stripe",
-        "NodeJs",
-        "Firebase",
-        "Sanity",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://www.wrkforceae.com/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: {
-        src: "/wrkforce.png",
-        width: 1200,
-        height: 630,
-      },
-      video:
-        "",
-    },
-    {
-      title: "Insight Hedge",
-      href: "https://insight-hedge.ihusam.tech/",
-      dates: "March 2025 - Present",
-      active: true,
-      description:
-        "An AI-powered hedge fund analysis application built with Next.js and LangChain.js.",
-      technologies: [
-        "OpenAI Agents SDK",
-        "NextJs",
-        "Langchain",
-        "LangGraph",
-        "FastAPI",
-        "Polygon API",
-        "Python",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://insight-hedge.ihusam.tech/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: {
-        src: "/images/insight-hedge.png",
-        width: 1200,
-        height: 630,
-      },
-      video:
-        "",
     },
   ],
 
