@@ -445,28 +445,30 @@ export const DATA = {
         "",
     },
     {
-      title: "Mohammed Faiyazuddin.com",
-      href: "https://www.mohammedfaiyazuddin.me/",
-      dates: "December 2024 - Jan 2025",
+      title: "Insight Hedge",
+      href: "https://insight-hedge.ihusam.tech/",
+      dates: "March 2025 - Present",
       active: true,
       description:
-        "A Portfolio Site for Mohammed Faiyazuddin — a MEP Specialist & Strategic Business Leader in Dubai, UAE",
+        "An AI-powered hedge fund analysis application built with Next.js and LangChain.js.",
       technologies: [
-        "ReactJs",
+        "OpenAI Agents SDK",
         "NextJs",
-        "Once UI",
-        "Vercel",
-        "Git"
+        "Langchain",
+        "LangGraph",
+        "FastAPI",
+        "Polygon API",
+        "Python",
       ],
       links: [
         {
           type: "Website",
-          href: "https://www.mohammedfaiyazuddin.me/",
+          href: "https://insight-hedge.ihusam.tech/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: {
-        src: "/mfu-thumbnail.png",
+        src: "/images/insight-hedge.png",
         width: 1200,
         height: 630,
       },
