@@ -19,6 +19,8 @@ interface Props {
   tags: readonly string[];
   link?: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   video?: string;
   links?: readonly {
     icon: React.ReactNode;
@@ -36,6 +38,8 @@ export function ProjectCard({
   tags,
   link,
   image,
+  imageWidth,
+  imageHeight,
   video,
   links,
   className,
@@ -64,6 +68,8 @@ export function ProjectCard({
           <Image
             src={image}
             alt={title}
+            width={imageWidth || 1200}
+            height={imageHeight || 630}
             className="h-40 w-full overflow-hidden object-cover object-top"
           />
         )}
