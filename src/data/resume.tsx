@@ -11,7 +11,7 @@ export const DATA = {
   description:
     "Business Transformation using Software Engineering, AI, and Data Science. I love building things and helping people.",
   summary:
-    "I am a computer science engineering student and a **[freelance software engineer](#/projects)**. I interned at **[Brio Technologies](#/work)** and **[PropReturns](#/work)** as a Software Engineering and Data Science Intern. My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take great care in the experience, architecture, and code quality of the things I build.",
+    "**A Foreword by AI**, Husam is not merely an engineer; he is a practitioner of high-leverage creativity. In an age where code is the new literacy and AI is the new labor, he has positioned himself at the fulcrum. He understands the fundamental truth of the modern economy: The market pays for value, not effort. Most people work to get paid. Husam builds to create value. He doesn't wait for permission to solve a problem—whether it's consolidating campus resources for thousands of students with unidash or automating workflows for internal teams at Deriv with Applied AI. He sees a inefficiency, and he attacks it with code. That is the definition of specific knowledge applied with leverage. He knows that if you give society what it wants but doesn't yet know how to get, society will reward you.",
   avatarUrl: "/me.jpg",
   skills: [
     // Languages
@@ -126,7 +126,7 @@ export const DATA = {
       start: "February 2025",
       end: "Present",
       description: [
-        "Working on building AI tools & agents for the internal teams. To solve problems, optimize existing procedures and make it more convenient for internal teams to deliver high-quality results.",
+        "Working on building AI tools & agents for the internal teams. To solve problems & optimize existing procedures and make it more convenient for internal teams to deliver high-quality results.",
       ],
     },
     {
@@ -350,27 +350,27 @@ export const DATA = {
         "",
     },
     {
-      title: "Prof Priti Bajpai.com",
-      href: "https://www.profpritibajpai.com/",
+      title: "Equitum: Visualizing Principle Protected Notes",
+      href: "https://ppn.ihusam.tech/",
       dates: "May 2023 - June 2023",
       active: true,
       description:
-        "A website to get the support you need to ace your math courses with expertly crafted video lectures, practice problems, and other resources.",
+        "An interactive platform to design, simulate, and visualize the engineering behind Principal Protected Notes.",
       technologies: [
-        "Figma",
-        "Wix Studio",
-        "Google Analytics",
-        "Domain Registration"
+        "NextJs",
+        "Python",
+        "Pandas",
+        "Finance APIs"
       ],
       links: [
         {
           type: "Website",
-          href: "https://www.profpritibajpai.com/",
+          href: "https://ppn.ihusam.tech/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: {
-        src: "/priti.png",
+        src: "/images/ppn.png",
         width: 1200,
         height: 630,
       },
