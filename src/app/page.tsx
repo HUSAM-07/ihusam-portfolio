@@ -43,10 +43,10 @@ export default function Page() {
       </section>
 
       <BlurFade delay={BLUR_FADE_DELAY * 2}>
-        <Link href="https://unidash.mohammedhusamuddin.me/" className="block w-full">
+        <Link href="https://prompt-console.ihusam.tech/" className="block w-full">
           <RainbowButton className="w-full">
             <Sparkle className="mr-2 size-4" />
-            Launching UniDash
+            Launching Prompt Console
           </RainbowButton>
         </Link>
       </BlurFade>
