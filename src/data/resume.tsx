@@ -3,70 +3,37 @@ import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
 import Image from 'next/image';
 
 export const DATA = {
-  name: "Husam",
+  name: "Mohammed Husamuddin",
   initials: "MHD",
   url: "https://www.mohusam.com",
   location: "Dubai, U.A.E",
   locationLink: "https://www.google.com/maps/place/Dubai",
   description:
-    "Business Transformation using Software Engineering, AI, and Data Science. I love building things and helping people.",
+    "Senior AI Engineer at Deriv. I lead applied AI products, from tool-using agents to real-time market intelligence.",
   summary:
-    "**A Foreword by AI**, Husam is not merely an engineer; he is a practitioner of high-leverage creativity. In an age where code is the new literacy and AI is the new labor, he has positioned himself at the fulcrum. He understands the fundamental truth of the modern economy: The market pays for value, not effort. Most people work to get paid. Husam builds to create value. He doesn't wait for permission to solve a problem—whether it's consolidating campus resources for thousands of students with unidash or automating workflows for internal teams at Deriv with Applied AI. He sees a inefficiency, and he attacks it with code. That is the definition of specific knowledge applied with leverage. He knows that if you give society what it wants but doesn't yet know how to get, society will reward you.",
+    "I own product direction and engineering delivery for applied AI platforms at Deriv. My work spans real-time market intelligence, AI-assisted lifecycle engagement, and internal campaign automation. I work with lean engineering teams and domain experts to turn prototypes into measurable products.\n\nRecent work includes scaling TradersView to 500K unique visitors and over 1M all-time visits, improving Praxis conversions per 1,000 sends from 19 to 59 in a reported week, and automating campaign preparation through TriggerHub.",
   avatarUrl: "/me.jpg",
   skills: [
-    // Languages
     "Python",
-    "C++",
-    "Matlab",
-    "SQL",
-    "HTML",
-    "CSS",
-    "JavaScript",
     "TypeScript",
-    "Assembly x86-64",
-
-    // Frameworks & Libraries
-    "Matplotlib",
-    "Pandas",
-    "Streamlit",
-    "TensorFlow",
-    "NumPy",
-    "Flask",
-    "BeautifulSoup",
-    "Scikit-Learn",
-    "OpenCV",
-    "Flower (Federated Learning)",
-    "Shadcn UI",
-    "Taipy",
-    "ROSpy",
-    "OpenAI",
-    "Hugging Face",
-    "Google-Auth",
-    "Google Maps API",
-    "MkDocs",
-
-    // Tools & Technologies
+    "SQL",
+    "AI Agents",
+    "Tool Use",
+    "Sandboxed Execution",
+    "LangGraph",
+    "Retrieval-Augmented Generation",
+    "Vector Search",
     "Next.js",
     "React",
-    "Node.js",
-    "MySQL",
-    "Firebase",
-    "Vercel",
-    "Heroku",
-    "Git",
-    "Google Cloud Platform",
-    "Azure",
-    "AWS",
-    "Figma",
-    "REST",
-    "Docker",
-    "Linux",
-    "VS Code",
-    "Prisma",
-    "Notion",
-    "Power BI",
-    "Tableau",
-    "Linear",
+    "FastAPI",
+    "WebSockets",
+    "PostgreSQL",
+    "Redis",
+    "Celery",
+    "Kubernetes",
+    "BigQuery",
+    "Experimentation",
+    "Product Ownership",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -76,7 +43,7 @@ export const DATA = {
   ],
   contact: {
     email: "workforhusam@gmail.com",
-    tel: "+123456789",
+    tel: "+971526775009",
     social: {
       GitHub: {
         name: "GitHub",
@@ -121,12 +88,14 @@ export const DATA = {
       href: "https://www.deriv.com/",
       badges: [],
       location: "Dubai, UAE",
-      title: "AI Engineer",
+      title: "AI Engineering (now Senior AI Engineer / Applied AI Product Lead)",
       logoUrl: "/deriv.jpg",
       start: "February 2025",
       end: "Present",
       description: [
-        "Working on building AI tools & agents for the internal teams. To solve problems & optimize existing procedures and make it more convenient for internal teams to deliver high-quality results.",
+        "Own product direction and technical delivery for TradersView, Praxis, and TriggerHub.",
+        "Scaled TradersView to 500K unique visitors and over 1M all-time visits with a lean core team of approximately 2–3 engineers.",
+        "Built AI-assisted lifecycle and campaign systems that improved conversion efficiency and saved an estimated 8–18 staff-hours per week.",
       ],
     },
     {
@@ -139,9 +108,8 @@ export const DATA = {
       start: "July 2024",
       end: "August 2024",
       description: [
-        "Developed a Cloud Pricing Calculator that facilitated easy comparison of migration costs across cloud platforms, utilizing Azure API integration, Python web frameworks (Streamlit), and data analysis.",
-        "Built a full-stack Sales Lead Email Generation Application that automated 80% of the lead generation process, increasing sales team productivity by 40%, utilizing LinkedIn's Rapid API, GPT-4 integration, and Streamlit (now converting codebase to React) for a responsive front-end.",
-        "Integrated Google Cloud Platform service accounts into the applications developed, enabling seamless and secure access to Google Cloud services without user intervention, learned how to proficiently practice cloud security, IAM policies, and programmatic authentication in production environments.",
+        "Built cloud pricing and AI-assisted sales tools with Python, Streamlit, Azure APIs, and GPT-4.",
+        "The lead generation application automated a reported 80% of the process and increased sales productivity 40%.",
       ],
     },
     {
@@ -154,7 +122,7 @@ export const DATA = {
       start: "June 2023",
       end: "Aug 2023",
       description:
-        "Engineered data pipeline using Python and regex, cleaning web-scraped data and reducing manual entry by 73%, while developing a reusable UI component library that boosted developer productivity by 40% andimproved system architecture, resulting in increase in UI consistency and flow efficiency",
+        "Built a Python data pipeline for scraped real-estate data, an OpenCV image processing app, and reusable UI components. Image preprocessing time fell 50%.",
     },
     {
       company: "Google Developer Student Clubs",
@@ -166,8 +134,7 @@ export const DATA = {
       start: "Aug 2023",
       end: "Sep 2024",
       description: [
-        "Expanded chapter to largest campus community (350+ members), managing 26-person team across 5 departments, implementing 3-tier structure, and overseeing 903+ student participations and certifications.",
-        "Developed and directed 4 internal and community applications/tools and 40+ long-term assets including automated scripts and internal web apps, increasing website traffic by 73% and documenting processes through SoP initiatives.",
+        "Led a 26-person team across five departments, grew the community to 350+ members, and supported 903+ student participations and certifications.",
       ],
     },
     {
@@ -180,41 +147,85 @@ export const DATA = {
       start: "June 2023",
       end: "Jan 2024",
       description: [
-        "Designed and developed a security compliance dashboard MVP, increasing valuation by 27% and gaining stakeholders approval.",
-        "Analyzed financial and operational metrics to identify cost-saving opportunities and recommend strategies for revenue growth",
-        "Pitched product to local and international investors & presented unit economics(CLV or LTV) and market analysis to stakeholders, contributing to securing $500,000 in funding, while developing strategies to improve market penetration",
+        "Built a security compliance dashboard MVP and presented product and market analysis to investors and stakeholders.",
       ],
     },
   ],
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s2",
-      logoUrl: "/buildspace.jpg",
-      start: "2023",
-      end: "2024",
-    },
-    {
       school: "Birla Institute of Technology & Sciences, Pilani",
       href: "https://www.bits-pilani.ac.in/dubai/",
-      degree: "Bachelor's Degree of Computer Science Engineering(B.Tech)",
+      degree: "B.E. Computer Science",
       logoUrl: "/bits.png",
       start: "2021",
       end: "2025",
-    },
-    {
-      school: "Delhi Private School, Sharjah",
-      href: "https://website.dpssharjah.com/",
-      degree: "Secondary Education, till Grade 12-CBSE",
-      logoUrl: "/dps.jpg",
-      start: "2007",
-      end: "2021",
     },
     
   
   ],
   projects: [
+    {
+      title: "TradersView / SatoriX",
+      href: "https://tradersview.deriv.com/",
+      dates: "Deriv",
+      active: true,
+      description:
+        "Led delivery of a real-time market intelligence platform reaching 500K unique visitors and over 1M all-time visits. Returning visitors reached 21.4%, with an average session of 3m 14s. Expanded news coverage from 4 to 53 instruments.",
+      technologies: [
+        "Next.js",
+        "FastAPI",
+        "WebSockets",
+        "Redis",
+        "Kubernetes",
+        "AI Insights",
+      ],
+      links: [
+        {
+          type: "Visit TradersView",
+          href: "https://tradersview.deriv.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: undefined,
+      video: "",
+    },
+    {
+      title: "Praxis",
+      href: "",
+      dates: "Deriv",
+      active: true,
+      description:
+        "Owned AI-assisted lifecycle targeting across demo-to-real, real-to-deposit, and deposit-to-trade journeys. In the reported week, the program generated 1,086 conversions and raised conversions per 1,000 sends from 19 to 59 while cutting sends 69%.",
+      technologies: [
+        "LangGraph",
+        "RAG",
+        "Next.js",
+        "PostgreSQL",
+        "A/B Testing",
+      ],
+      links: [],
+      image: undefined,
+      video: "",
+    },
+    {
+      title: "TriggerHub API",
+      href: "",
+      dates: "Deriv",
+      active: true,
+      description:
+        "Automated campaign preparation and CRM handoffs, freeing an estimated 8–18 staff-hours each week. Bounded AI workflows, approvals, recipient-level status, and duplicate prevention keep operators in control.",
+      technologies: [
+        "FastAPI",
+        "PostgreSQL",
+        "Celery",
+        "Redis",
+        "LangGraph",
+        "Vector Search",
+      ],
+      links: [],
+      image: undefined,
+      video: "",
+    },
     {
       title: "Image Processing for Crack Detection using XFEM, Machine Learning & Deep Learning Techniques",
       href: "https://github.com/HUSAM-07/DL-Image-Processing-Crack-Detection",

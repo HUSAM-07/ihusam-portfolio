@@ -9,7 +9,7 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import { Sparkle, PencilLine, Mail } from "lucide-react";
+import { PencilLine, Mail } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -24,7 +24,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
+                text="Hi, I'm Husam 👋"
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
@@ -41,15 +41,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      <BlurFade delay={BLUR_FADE_DELAY * 2}>
-        <Link href="https://prompt-console.ihusam.tech/" className="block w-full">
-          <RainbowButton className="w-full">
-            <Sparkle className="mr-2 size-4" />
-            Launching Prompt Console
-          </RainbowButton>
-        </Link>
-      </BlurFade>
 
       <BlurFade delay={BLUR_FADE_DELAY * 2.5}>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -78,6 +69,34 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
+      <section id="featured-work">
+        <div className="space-y-5">
+          <div>
+            <h2 className="text-xl font-bold">Featured work at Deriv</h2>
+            <p className="text-sm text-muted-foreground">
+              Products I lead across market intelligence, lifecycle engagement,
+              and campaign operations.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {DATA.projects.slice(0, 3).map((project) => (
+              <ProjectCard
+                key={project.title}
+                href={project.href}
+                title={project.title}
+                description={project.description}
+                dates={project.dates}
+                tags={project.technologies}
+                image={project.image?.src}
+                imageWidth={project.image?.width}
+                imageHeight={project.image?.height}
+                video={project.video}
+                links={project.links}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -98,9 +117,9 @@ export default function Page() {
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
                 description={Array.isArray(work.description) 
-                  ? work.description.join(' ').replace(/[.,]/g, '') 
+                  ? work.description.join(' ')
                   : typeof work.description === 'string' 
-                    ? work.description.replace(/[.,]/g, '')
+                    ? work.description
                     : undefined}
               />
             </BlurFade>
@@ -150,21 +169,19 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
+                  Independent Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
+                  Selected independent projects
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
+                  Software and AI products I&apos;ve built outside my work at Deriv.
                 </p>
               </div>
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
+            {DATA.projects.slice(3).map((project, id) => (
               <BlurFade
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
@@ -195,17 +212,17 @@ export default function Page() {
                 Contact
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in Touch
+                Get in touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                For conversations about applied AI, product engineering, or
+                collaboration,{" "}
                 <Link
-                  href={DATA.contact.social.X.url}
+                  href={`mailto:${DATA.contact.email}`}
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
-                </Link>{" "}
-                and I&apos;ll respond whenever I can.
+                  send me an email
+                </Link>.
               </p>
             </div>
           </BlurFade>
