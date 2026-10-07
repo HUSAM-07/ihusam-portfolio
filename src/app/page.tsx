@@ -8,8 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { RainbowButton } from "@/components/ui/rainbow-button";
-import { Sparkle, PencilLine, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import DotPattern from "@/components/magicui/dot-pattern";
+import { ArrowUpRight, Sparkle, PencilLine, Mail } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -17,7 +18,8 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
+        <DotPattern className="fixed inset-x-0 top-0 z-0 h-40 w-full fill-neutral-400/35 [mask-image:linear-gradient(to_bottom,black,transparent)] dark:fill-neutral-500/20" />
+        <div className="relative z-10 mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
@@ -43,28 +45,26 @@ export default function Page() {
       </section>
 
       <BlurFade delay={BLUR_FADE_DELAY * 2}>
-        <Link href="https://prompt-console.ihusam.tech/" className="block w-full">
-          <RainbowButton className="w-full">
-            <Sparkle className="mr-2 size-4" />
-            Launching Prompt Console
-          </RainbowButton>
-        </Link>
-      </BlurFade>
-
-      <BlurFade delay={BLUR_FADE_DELAY * 2.5}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Link href="/Mohammed Husamuddin Resume.pdf" className="block w-full">
-            <RainbowButton className="w-full">
+        <div className="relative z-10 flex flex-wrap items-center gap-2">
+          <Button asChild size="sm" variant="secondary">
+            <Link href="https://atradeaday.com" target="_blank" rel="noopener noreferrer">
+              <Sparkle className="mr-2 size-4" />
+              Launching atradeaday.com
+              <ArrowUpRight className="ml-1 size-3" />
+            </Link>
+          </Button>
+          <Button asChild size="sm" variant="outline">
+            <Link href="/Mohammed Husamuddin Resume.pdf">
               <PencilLine className="mr-2 size-4" />
               View Resume
-            </RainbowButton>
-          </Link>
-          <Link href={`mailto:${DATA.contact.email}`} className="block w-full">
-            <RainbowButton className="w-full">
+            </Link>
+          </Button>
+          <Button asChild size="sm" variant="ghost">
+            <Link href={`mailto:${DATA.contact.email}`}>
               <Mail className="mr-2 size-4" />
               Say Hi!
-            </RainbowButton>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </BlurFade>
 
