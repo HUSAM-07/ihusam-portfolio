@@ -9,10 +9,23 @@ import {
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 
+// Nav links + social links + theme toggle.
+const DOCK_ITEMS =
+  DATA.navbar.length +
+  Object.values(DATA.contact.social).filter((social) => social.navbar).length +
+  1;
+
+// Shrink icons so the whole dock fits narrow phones: on mobile the dock is 6px padding, 4px gaps,
+// 1px border and two 1px separators, plus 12px of breathing room each side. Capped at 40px.
+const DOCK_ICON_SIZE = `clamp(26px, calc((100vw - ${44 + 4 * DOCK_ITEMS}px) / ${DOCK_ITEMS}), 40px)`;
+
 export default function Navbar() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30">
-      <Dock className="z-50 pointer-events-auto relative h-14 p-2 w-fit mx-auto flex gap-2 border bg-card/90 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5">
+      <Dock
+        className="z-50 pointer-events-auto relative h-[calc(var(--dock-icon-size)+12px)] p-1.5 gap-1 sm:h-14 sm:p-2 sm:gap-2 w-fit mx-auto flex border bg-card/90 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5"
+        style={{ "--dock-icon-size": DOCK_ICON_SIZE } as React.CSSProperties}
+      >
         {DATA.navbar.map((item) => {
           const isExternal = item.href.startsWith("http");
           return (
@@ -79,7 +92,8 @@ export default function Navbar() {
         <Tooltip>
           <TooltipTrigger asChild>
             <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
-              <ModeToggle className="size-full cursor-pointer" />
+              {/* ::after stretches the click target over the whole dock circle, not just the 16-20px icon */}
+              <ModeToggle className="size-full cursor-pointer after:absolute after:inset-0 after:rounded-full after:content-['']" />
             </DockIcon>
           </TooltipTrigger>
           <TooltipContent

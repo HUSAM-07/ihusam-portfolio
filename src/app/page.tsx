@@ -9,8 +9,9 @@ import ContactSection from "@/components/section/contact-section";
 import WritingSection from "@/components/section/writing-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
-import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Mail, PencilLine, Sparkle } from "lucide-react";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -94,26 +95,17 @@ export default function Page() {
             </BlurFade>
           </div>
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
-            <div className="flex flex-wrap items-center gap-2">
-              <Button asChild size="sm" className="rounded-xl gap-1.5">
+            <div className="flex flex-wrap items-center gap-3">
+              <RainbowButton asChild className="h-10 rounded-xl px-5 text-sm">
                 <Link href="https://atradeaday.com" target="_blank" rel="noopener noreferrer">
-                  <Sparkle className="size-4" />
-                  Now building: A Trade A Day
-                  <ArrowUpRight className="size-3" />
+                  Building A Trade A Day
                 </Link>
-              </Button>
-              <Button asChild size="sm" variant="outline" className="rounded-xl gap-1.5">
+              </RainbowButton>
+              <ShimmerButton asChild borderRadius="12px" className="h-10 px-5 text-sm font-medium">
                 <Link href="/Mohammed Husamuddin Resume.pdf" target="_blank">
-                  <PencilLine className="size-4" />
                   Resume
                 </Link>
-              </Button>
-              <Button asChild size="sm" variant="ghost" className="rounded-xl gap-1.5">
-                <Link href={`mailto:${DATA.contact.email}`}>
-                  <Mail className="size-4" />
-                  Say hi
-                </Link>
-              </Button>
+              </ShimmerButton>
             </div>
           </BlurFade>
         </div>
@@ -199,7 +191,7 @@ export default function Page() {
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                 <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2">
-                  {skill.icon && <skill.icon className="size-4 rounded overflow-hidden object-contain" />}
+                  <skill.icon className="size-4 rounded overflow-hidden object-contain" />
                   <span className="text-foreground text-sm font-medium">{skill.name}</span>
                 </div>
               </BlurFade>

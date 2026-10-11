@@ -7,35 +7,69 @@ import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Docker } from "@/components/ui/svgs/docker";
+import { Golang } from "@/components/ui/svgs/golang";
+import { Postgresql } from "@/components/ui/svgs/postgresql";
+import { Redis } from "@/components/ui/svgs/redis";
+import { Kubernetes } from "@/components/ui/svgs/kubernetes";
+import { Java } from "@/components/ui/svgs/java";
+import { Csharp } from "@/components/ui/svgs/csharp";
+import { Supabase } from "@/components/ui/svgs/supabase";
+import { AmazonWebServices } from "@/components/ui/svgs/amazonWebServices";
+import { GoogleCloud } from "@/components/ui/svgs/googleCloud";
+import { CloudflareWorkers } from "@/components/ui/svgs/cloudflareWorkers";
+import { Datadog } from "@/components/ui/svgs/datadog";
+import { ModelContextProtocol } from "@/components/ui/svgs/modelContextProtocol";
+import { LangChain } from "@/components/ui/svgs/langchain";
+import { Vercel } from "@/components/ui/svgs/vercel";
+import { PostHog } from "@/components/ui/svgs/posthog";
+import { Postman } from "@/components/ui/svgs/postman";
+import { TensorFlow } from "@/components/ui/svgs/tensorflow";
+import { FastAPI } from "@/components/ui/svgs/fastapi";
+import { OpenAI } from "@/components/ui/svgs/openai";
+import { ClaudeAI } from "@/components/ui/svgs/claude";
+import { OpenRouter } from "@/components/ui/svgs/openrouter";
+import { GitHub } from "@/components/ui/svgs/github";
+import { Ngrok } from "@/components/ui/svgs/ngrok";
+import { Nginx } from "@/components/ui/svgs/nginx";
+import { ApacheKafka } from "@/components/ui/svgs/apacheKafka";
 
 const BLOG_URL = "https://ihusam.tech/blog";
 const NEWSLETTER_URL = "https://valuevault.beehiiv.com/";
 
-// Not every skill has a logo; the chip renders the icon only when there is one.
-type Skill = { name: string; icon?: (props: SVGProps<SVGSVGElement>) => JSX.Element };
+type Skill = { name: string; icon: (props: SVGProps<SVGSVGElement>) => JSX.Element };
 
 const SKILLS: readonly Skill[] = [
-  { name: "Python", icon: Python },
-  { name: "TypeScript", icon: Typescript },
   { name: "React", icon: ReactLight },
   { name: "Next.js", icon: NextjsIconDark },
+  { name: "TypeScript", icon: Typescript },
   { name: "Node.js", icon: Nodejs },
+  { name: "Python", icon: Python },
+  { name: "Go", icon: Golang },
+  { name: "PostgreSQL", icon: Postgresql },
+  { name: "Redis", icon: Redis },
   { name: "Docker", icon: Docker },
-  { name: "AI Agents" },
-  { name: "LLM APIs (OpenAI, Anthropic, Gemini)" },
-  { name: "LangChain / LangGraph" },
-  { name: "Prompt Engineering" },
-  { name: "FastAPI" },
-  { name: "TensorFlow" },
-  { name: "scikit-learn" },
-  { name: "SQL" },
-  { name: "Firebase" },
-  { name: "Prisma" },
-  { name: "Tailwind CSS" },
-  { name: "AWS / GCP / Azure" },
-  { name: "Vercel" },
-  { name: "C++" },
-  { name: "Figma" },
+  { name: "Kubernetes", icon: Kubernetes },
+  { name: "Java", icon: Java },
+  { name: "C++", icon: Csharp },
+  { name: "Supabase", icon: Supabase },
+  { name: "AWS", icon: AmazonWebServices },
+  { name: "GCP", icon: GoogleCloud },
+  { name: "Cloudflare Workers", icon: CloudflareWorkers },
+  { name: "Datadog", icon: Datadog },
+  { name: "MCP", icon: ModelContextProtocol },
+  { name: "OpenAI", icon: OpenAI },
+  { name: "Claude", icon: ClaudeAI },
+  { name: "OpenRouter", icon: OpenRouter },
+  { name: "LangChain / LangGraph", icon: LangChain },
+  { name: "Vercel", icon: Vercel },
+  { name: "PostHog", icon: PostHog },
+  { name: "Postman", icon: Postman },
+  { name: "TensorFlow", icon: TensorFlow },
+  { name: "FastAPI", icon: FastAPI },
+  { name: "GitHub", icon: GitHub },
+  { name: "nginx", icon: Nginx },
+  { name: "ngrok", icon: Ngrok },
+  { name: "Kafka", icon: ApacheKafka },
 ];
 
 export const DATA = {
@@ -47,20 +81,20 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/Dubai",
   description:
     "Product builder turned AI engineer. I build AI agents at Deriv, ship my own products on the side, and write about whatever I can't stop thinking about.",
-  summary: `I started out building products. [UniDash](https://unidash.mohammedhusamuddin.me/), a dashboard for university students, grew to 2,100+ daily users. The compliance dashboard I built at [Styx](https://getstyx.io/) went in front of investors in a $500K round. Along the way I studied computer science at [BITS Pilani, Dubai](/#education) and grew our [Google Developer Student Club](/#work) to 350+ members.
+  summary: `I started out building products. [UniDash](https://unidash.mohammedhusamuddin.me/), a dashboard for university students, grew to 2,100+ daily users. Along the way I studied computer science at [BITS Pilani, Dubai](/#education) and grew our [Google Developer Student Club](/#work) to 350+ members.
 
-Now I'm an AI engineer at [Deriv](https://www.deriv.com/). I build the AI tools and agents that internal teams use to get real work done, with less of it done by hand.
+Now I'm a Senior AI Engineer at [Deriv](https://www.deriv.com/). I build the AI tools and agents that internal teams use to get real work done, with less of it done by hand.
 
 I still ship my own things. [A Trade A Day](https://atradeaday.com) turns live market data into risk-defined trade plans. [Gist](https://www.gist.ihusam.tech/) turns long PDFs into something you'll actually read. And I [write](${BLOG_URL}) about LLMOps, markets, leverage and anything else that holds my attention.`,
   avatarUrl: "/me.jpg",
 
   // Plain-language positioning used for metadata, JSON-LD and /llms.txt (what search engines and agents read).
-  jobTitle: "AI Engineer",
+  jobTitle: "Senior AI Engineer",
   headline:
     "Product builder turned AI engineer. Builds AI agents and tools at Deriv in Dubai, ships his own products, and writes about whatever interests him.",
   bio: [
     "Mohammed Husamuddin (Husam) is an AI engineer and software engineer based in Dubai, U.A.E. He started as a product builder, taking products from idea and design to code, launch and users.",
-    "Today he leads applied-AI work as an AI Engineer at Deriv, building AI tools and agents that internal teams use to cut manual work and deliver faster.",
+    "Today he is a Senior AI Engineer at Deriv, building AI tools and agents that internal teams use to cut manual work and deliver faster.",
     "He keeps shipping his own products: UniDash (a student dashboard with 2,100+ daily active users), A Trade A Day (a real-time AI market-intelligence PWA), Gist (AI PDF summaries), Prompt Console (a model-agnostic prompt-engineering console) and Insight Hedge (AI hedge-fund analysis).",
     "He is also a writer. He writes about whatever interests him (AI engineering, LLMOps, markets, building products and ideas) on his blog and in his newsletter, Value Vault.",
   ],
@@ -130,7 +164,7 @@ I still ship my own things. [A Trade A Day](https://atradeaday.com) turns live m
       company: "Deriv",
       href: "https://www.deriv.com/",
       location: "Dubai, UAE",
-      title: "AI Engineer",
+      title: "Senior AI Engineer",
       logoUrl: "/deriv.jpg",
       start: "Feb 2025",
       end: "Present",

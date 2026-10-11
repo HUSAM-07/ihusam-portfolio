@@ -1,11 +1,12 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion, type MotionValue, useMotionValue, useSpring, useTransform } from "motion/react";
-import { createContext, useContext, useRef, type ReactNode } from "react";
+import { motion, type MotionValue, useMotionTemplate, useMotionValue, useSpring, useTransform } from "motion/react";
+import { createContext, useContext, useRef, type CSSProperties, type ReactNode } from "react";
 
 interface DockProps {
   className?: string;
+  style?: CSSProperties;
   children: ReactNode;
   magnification?: number;
   distance?: number;
@@ -31,14 +32,16 @@ interface DockContextValue {
 
 const DockContext = createContext<DockContextValue | null>(null);
 
-const Dock = ({ className, children, magnification = DEFAULT_MAGNIFICATION, distance = DEFAULT_DISTANCE }: DockProps) => {
+const Dock = ({ className, style, children, magnification = DEFAULT_MAGNIFICATION, distance = DEFAULT_DISTANCE }: DockProps) => {
   const mouseX = useMotionValue(Infinity);
 
   return (
     <DockContext.Provider value={{ mouseX, magnification, distance }}>
       <motion.div
-        onMouseMove={(e) => mouseX.set(e.pageX)}
-        onMouseLeave={() => mouseX.set(Infinity)}
+        // Magnify only for a real mouse: on touch screens a tap would grow icons past the viewport.
+        onPointerMove={(e) => e.pointerType === "mouse" && mouseX.set(e.pageX)}
+        onPointerLeave={() => mouseX.set(Infinity)}
+        style={style}
         className={cn("mx-auto w-max h-full flex items-end justify-center overflow-visible rounded-full border", className)}
       >
         {children}
@@ -62,14 +65,18 @@ const DockIcon = ({ className, children }: DockIconProps) => {
     return val - bounds.x - bounds.width / 2;
   });
 
-  const containerSize = useSpring(
-    useTransform(distanceCalc, [-distance, 0, distance], [BASE_SIZE, magnification, BASE_SIZE]),
+  // Magnification is animated as an offset on top of a CSS base size (--dock-icon-size, default
+  // BASE_SIZE), so the resting size can be responsive while the hover effect stays the same.
+  const containerGrowth = useSpring(
+    useTransform(distanceCalc, [-distance, 0, distance], [0, magnification - BASE_SIZE, 0]),
     SPRING
   );
-  const iconSize = useSpring(
-    useTransform(distanceCalc, [-distance, 0, distance], [BASE_ICON_SIZE, magnification * ICON_SIZE_RATIO, BASE_ICON_SIZE]),
+  const iconGrowth = useSpring(
+    useTransform(distanceCalc, [-distance, 0, distance], [0, magnification * ICON_SIZE_RATIO - BASE_ICON_SIZE, 0]),
     SPRING
   );
+  const containerSize = useMotionTemplate`calc(var(--dock-icon-size, ${BASE_SIZE}px) + ${containerGrowth}px)`;
+  const iconSize = useMotionTemplate`calc(var(--dock-icon-size, ${BASE_SIZE}px) * ${ICON_SIZE_RATIO} + ${iconGrowth}px)`;
 
   return (
     <motion.div

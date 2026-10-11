@@ -53,10 +53,10 @@ export default function WritingSection() {
                 href={post.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-1 flex-col justify-start gap-2 min-w-0"
+                className="group/post flex flex-1 flex-col justify-start gap-2 min-w-0"
               >
                 <time className="text-xs text-muted-foreground">{post.date}</time>
-                <h3 className="font-semibold leading-snug group-hover:underline underline-offset-4">
+                <h3 className="font-semibold leading-snug group-hover/post:underline underline-offset-4">
                   {post.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed wrap-break-word">
