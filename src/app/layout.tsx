@@ -15,15 +15,24 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
+    default: `${DATA.fullName} (${DATA.name}) – ${DATA.jobTitle} & Product Builder`,
+    template: `%s | ${DATA.fullName}`,
   },
-  description: DATA.description,
+  description: DATA.headline,
+  keywords: [...DATA.keywords],
+  authors: [{ name: DATA.fullName, url: DATA.url }],
+  creator: DATA.fullName,
+  alternates: {
+    canonical: "/",
+    // Points agents at the plain-text profile (see /llms.txt).
+    types: { "text/plain": "/llms.txt" },
+  },
   openGraph: {
-    title: `${DATA.name}`,
-    description: DATA.description,
+    title: `${DATA.fullName} – ${DATA.jobTitle} & Product Builder`,
+    description: DATA.headline,
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: DATA.fullName,
+    images: [{ url: DATA.avatarUrl, alt: DATA.fullName }],
     locale: "en_US",
     type: "website",
   },
@@ -39,12 +48,10 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
-    card: "summary_large_image",
-  },
-  verification: {
-    google: "",
-    yandex: "",
+    title: `${DATA.fullName} – ${DATA.jobTitle} & Product Builder`,
+    description: DATA.headline,
+    card: "summary",
+    creator: "@HU_SAM007",
   },
 };
 
