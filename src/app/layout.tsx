@@ -4,12 +4,20 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 
-const fontSans = FontSans({
+const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +40,6 @@ export const metadata: Metadata = {
     description: DATA.headline,
     url: DATA.url,
     siteName: DATA.fullName,
-    images: [{ url: DATA.avatarUrl, alt: DATA.fullName }],
     locale: "en_US",
     type: "website",
   },
@@ -50,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.fullName} – ${DATA.jobTitle} & Product Builder`,
     description: DATA.headline,
-    card: "summary",
+    card: "summary_large_image",
     creator: "@HU_SAM007",
   },
 };
@@ -64,13 +71,27 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
+          "min-h-screen bg-background font-sans antialiased relative",
+          geist.variable,
+          geistMono.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
-            {children}
+            <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
+              <FlickeringGrid
+                className="h-full w-full"
+                squareSize={2}
+                gridGap={2}
+                style={{
+                  maskImage: "linear-gradient(to bottom, black, transparent)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
+                }}
+              />
+            </div>
+            <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
+              {children}
+            </div>
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>

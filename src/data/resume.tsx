@@ -1,21 +1,68 @@
+import type { JSX, SVGProps } from "react";
 import { Icons } from "@/components/icons";
 import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
-import Image from 'next/image';
+import { Python } from "@/components/ui/svgs/python";
+import { Typescript } from "@/components/ui/svgs/typescript";
+import { ReactLight } from "@/components/ui/svgs/reactLight";
+import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
+import { Nodejs } from "@/components/ui/svgs/nodejs";
+import { Docker } from "@/components/ui/svgs/docker";
+
+const BLOG_URL = "https://ihusam.tech/blog";
+const NEWSLETTER_URL = "https://valuevault.beehiiv.com/";
+
+// Not every skill has a logo; the chip renders the icon only when there is one.
+type Skill = { name: string; icon?: (props: SVGProps<SVGSVGElement>) => JSX.Element };
+
+const SKILLS: readonly Skill[] = [
+  { name: "Python", icon: Python },
+  { name: "TypeScript", icon: Typescript },
+  { name: "React", icon: ReactLight },
+  { name: "Next.js", icon: NextjsIconDark },
+  { name: "Node.js", icon: Nodejs },
+  { name: "Docker", icon: Docker },
+  { name: "AI Agents" },
+  { name: "LLM APIs (OpenAI, Anthropic, Gemini)" },
+  { name: "LangChain / LangGraph" },
+  { name: "Prompt Engineering" },
+  { name: "FastAPI" },
+  { name: "TensorFlow" },
+  { name: "scikit-learn" },
+  { name: "SQL" },
+  { name: "Firebase" },
+  { name: "Prisma" },
+  { name: "Tailwind CSS" },
+  { name: "AWS / GCP / Azure" },
+  { name: "Vercel" },
+  { name: "C++" },
+  { name: "Figma" },
+];
 
 export const DATA = {
   name: "Husam",
   fullName: "Mohammed Husamuddin",
-  initials: "MHD",
+  initials: "MH",
   url: "https://www.mohusam.com",
+  location: "Dubai, U.A.E",
+  locationLink: "https://www.google.com/maps/place/Dubai",
+  description:
+    "Product builder turned AI engineer. I build AI agents at Deriv, ship my own products on the side, and write about whatever I can't stop thinking about.",
+  summary: `I started out building products. [UniDash](https://unidash.mohammedhusamuddin.me/), a dashboard for university students, grew to 2,100+ daily users. The compliance dashboard I built at [Styx](https://getstyx.io/) went in front of investors in a $500K round. Along the way I studied computer science at [BITS Pilani, Dubai](/#education) and grew our [Google Developer Student Club](/#work) to 350+ members.
+
+Now I'm an AI engineer at [Deriv](https://www.deriv.com/). I build the AI tools and agents that internal teams use to get real work done, with less of it done by hand.
+
+I still ship my own things. [A Trade A Day](https://atradeaday.com) turns live market data into risk-defined trade plans. [Gist](https://www.gist.ihusam.tech/) turns long PDFs into something you'll actually read. And I [write](${BLOG_URL}) about LLMOps, markets, leverage and anything else that holds my attention.`,
+  avatarUrl: "/me.jpg",
+
   // Plain-language positioning used for metadata, JSON-LD and /llms.txt (what search engines and agents read).
   jobTitle: "AI Engineer",
   headline:
-    "Product builder turned AI engineer and software engineer, building AI agents and tools at Deriv in Dubai, who also writes about whatever interests him.",
+    "Product builder turned AI engineer. Builds AI agents and tools at Deriv in Dubai, ships his own products, and writes about whatever interests him.",
   bio: [
-    "Mohammed Husamuddin (Husam) is an AI engineer and software engineer based in Dubai, U.A.E. He started as a product builder: shipping products end to end, from idea and design to code, launch and users.",
-    "Today he leads applied-AI work as an AI Engineer at Deriv, building AI tools and agents that internal teams use to solve problems and speed up how they deliver.",
-    "He keeps shipping his own products too: UniDash (a student all-in-one platform with 2,100+ daily active users), A Trade A Day (a real-time AI market-intelligence PWA), Gist (AI PDF summaries), Prompt Console (a model-agnostic prompt-engineering console) and Insight Hedge (an AI hedge-fund analysis app).",
-    "He is also a writer who writes about whatever interests him: AI, engineering, building products, markets and ideas, on his blog and his newsletter, Value Vault.",
+    "Mohammed Husamuddin (Husam) is an AI engineer and software engineer based in Dubai, U.A.E. He started as a product builder, taking products from idea and design to code, launch and users.",
+    "Today he leads applied-AI work as an AI Engineer at Deriv, building AI tools and agents that internal teams use to cut manual work and deliver faster.",
+    "He keeps shipping his own products: UniDash (a student dashboard with 2,100+ daily active users), A Trade A Day (a real-time AI market-intelligence PWA), Gist (AI PDF summaries), Prompt Console (a model-agnostic prompt-engineering console) and Insight Hedge (AI hedge-fund analysis).",
+    "He is also a writer. He writes about whatever interests him (AI engineering, LLMOps, markets, building products and ideas) on his blog and in his newsletter, Value Vault.",
   ],
   keywords: [
     "AI engineer",
@@ -34,114 +81,45 @@ export const DATA = {
     "Dubai",
     "UAE",
   ],
-  writing: {
-    blog: "https://ihusam.tech/",
-    newsletter: "https://valuevault.beehiiv.com/",
-  },
-  location: "Dubai, U.A.E",
-  locationLink: "https://www.google.com/maps/place/Dubai",
-  description:
-    "Business Transformation using Software Engineering, AI, and Data Science. I love building things and helping people.",
-  summary:
-    "**A Foreword by AI**, Husam is not merely an engineer; he is a practitioner of high-leverage creativity. In an age where code is the new literacy and AI is the new labor, he has positioned himself at the fulcrum. He understands the fundamental truth of the modern economy: The market pays for value, not effort. Most people work to get paid. Husam builds to create value. He doesn't wait for permission to solve a problem—whether it's consolidating campus resources for thousands of students with unidash or automating workflows for internal teams at Deriv with Applied AI. He sees a inefficiency, and he attacks it with code. That is the definition of specific knowledge applied with leverage. He knows that if you give society what it wants but doesn't yet know how to get, society will reward you.",
-  avatarUrl: "/me.jpg",
-  skills: [
-    // Languages
-    "Python",
-    "C++",
-    "Matlab",
-    "SQL",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "Assembly x86-64",
 
-    // Frameworks & Libraries
-    "Matplotlib",
-    "Pandas",
-    "Streamlit",
-    "TensorFlow",
-    "NumPy",
-    "Flask",
-    "BeautifulSoup",
-    "Scikit-Learn",
-    "OpenCV",
-    "Flower (Federated Learning)",
-    "Shadcn UI",
-    "Taipy",
-    "ROSpy",
-    "OpenAI",
-    "Hugging Face",
-    "Google-Auth",
-    "Google Maps API",
-    "MkDocs",
-
-    // Tools & Technologies
-    "Next.js",
-    "React",
-    "Node.js",
-    "MySQL",
-    "Firebase",
-    "Vercel",
-    "Heroku",
-    "Git",
-    "Google Cloud Platform",
-    "Azure",
-    "AWS",
-    "Figma",
-    "REST",
-    "Docker",
-    "Linux",
-    "VS Code",
-    "Prisma",
-    "Notion",
-    "Power BI",
-    "Tableau",
-    "Linear",
-  ],
+  skills: SKILLS,
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "https://ihusam.tech/", icon: NotebookIcon, label: "Blog" },
+    { href: BLOG_URL, icon: NotebookIcon, label: "Blog" },
     { href: "https://projects.ihusam.tech/", icon: CodeIcon, label: "Projects" },
     { href: "/Mohammed Husamuddin Resume.pdf", icon: PencilLine, label: "Resume" },
   ],
   contact: {
     email: "workforhusam@gmail.com",
-    tel: "+123456789",
     social: {
       GitHub: {
         name: "GitHub",
         url: "https://github.com/HUSAM-07",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/mohammedhusamuddin/",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       X: {
         name: "X",
         url: "https://twitter.com/HU_SAM007",
         icon: Icons.x,
-
         navbar: true,
       },
       Newsletter: {
         name: "Newsletter",
-        url: "https://valuevault.beehiiv.com/",
+        url: NEWSLETTER_URL,
         icon: Icons.newsletter,
         navbar: true,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:workforhusam@gmail.com",
         icon: Icons.email,
-
         navbar: false,
       },
     },
@@ -151,74 +129,79 @@ export const DATA = {
     {
       company: "Deriv",
       href: "https://www.deriv.com/",
-      badges: [],
       location: "Dubai, UAE",
       title: "AI Engineer",
       logoUrl: "/deriv.jpg",
-      start: "February 2025",
+      start: "Feb 2025",
       end: "Present",
       description: [
-        "Working on building AI tools & agents for the internal teams. To solve problems & optimize existing procedures and make it more convenient for internal teams to deliver high-quality results.",
+        "Build AI tools and agents for Deriv's internal teams: find the slow, manual parts of how work gets done and replace them with software people actually use.",
       ],
     },
     {
       company: "Brio",
       href: "https://www.briotech.com/",
-      badges: [],
       location: "Hyderabad, India",
       title: "Software Engineering Intern",
       logoUrl: "/brio.jpg",
-      start: "July 2024",
-      end: "August 2024",
+      start: "Jul 2024",
+      end: "Aug 2024",
       description: [
-        "Developed a Cloud Pricing Calculator that facilitated easy comparison of migration costs across cloud platforms, utilizing Azure API integration, Python web frameworks (Streamlit), and data analysis.",
-        "Built a full-stack Sales Lead Email Generation Application that automated 80% of the lead generation process, increasing sales team productivity by 40%, utilizing LinkedIn's Rapid API, GPT-4 integration, and Streamlit (now converting codebase to React) for a responsive front-end.",
-        "Integrated Google Cloud Platform service accounts into the applications developed, enabling seamless and secure access to Google Cloud services without user intervention, learned how to proficiently practice cloud security, IAM policies, and programmatic authentication in production environments.",
+        "Built a sales-lead email generator on GPT-4 and LinkedIn data (RapidAPI) that automated ~80% of lead generation and made the sales team 40% more productive.",
+        "Built a cloud pricing calculator (Python, Streamlit, Azure APIs) so clients could compare migration costs across cloud providers side by side.",
+        "Connected both apps to Google Cloud through service accounts, so they reach GCP securely with no user sign-in. That meant hands-on IAM and auth in production.",
       ],
     },
     {
-      company: "PropReturns",
-      href: "https://www.propreturns.com/",
-      badges: [],
-      location: "Remote",
-      title: "Full Stack & Data Science Engineer",
-      logoUrl: "/propreturns.jpg",
-      start: "June 2023",
-      end: "Aug 2023",
-      description:
-        "Engineered data pipeline using Python and regex, cleaning web-scraped data and reducing manual entry by 73%, while developing a reusable UI component library that boosted developer productivity by 40% andimproved system architecture, resulting in increase in UI consistency and flow efficiency",
-    },
-    {
       company: "Google Developer Student Clubs",
-      badges: [],
-      href: "https://developers.google.com/",
-      location: "On-Site",
+      href: "https://developers.google.com/community/gdsc",
+      location: "BITS Pilani, Dubai",
       title: "Lead",
       logoUrl: "/gdsc.png",
       start: "Aug 2023",
       end: "Sep 2024",
       description: [
-        "Expanded chapter to largest campus community (350+ members), managing 26-person team across 5 departments, implementing 3-tier structure, and overseeing 903+ student participations and certifications.",
-        "Developed and directed 4 internal and community applications/tools and 40+ long-term assets including automated scripts and internal web apps, increasing website traffic by 73% and documenting processes through SoP initiatives.",
+        "Grew the chapter into the largest community on campus: 350+ members, a 26-person team across 5 departments, and 900+ student participations and certifications.",
+        "Shipped 4 internal and community tools plus 40+ reusable assets (scripts, internal web apps, SOPs). Website traffic went up 73%.",
       ],
     },
     {
-      company: "Styx (B2B SaaS StartUp)",
-      badges: [],
+      company: "Styx",
       href: "https://getstyx.io/",
-      location: "On-Site",
-      title: "Founders Office & Business Strategy Analyst",
+      location: "On-site",
+      title: "Founder's Office & Business Strategy Analyst",
       logoUrl: "/getstyx.jpg",
-      start: "June 2023",
+      start: "Jun 2023",
       end: "Jan 2024",
       description: [
-        "Designed and developed a security compliance dashboard MVP, increasing valuation by 27% and gaining stakeholders approval.",
-        "Analyzed financial and operational metrics to identify cost-saving opportunities and recommend strategies for revenue growth",
-        "Pitched product to local and international investors & presented unit economics(CLV or LTV) and market analysis to stakeholders, contributing to securing $500,000 in funding, while developing strategies to improve market penetration",
+        "Designed and built the security compliance dashboard MVP. It won stakeholder sign-off and lifted the company's valuation by 27%.",
+        "Pitched local and international investors on unit economics (LTV) and market analysis, part of a round that raised $500K.",
+        "Dug through financial and operational metrics to find cost savings and levers for revenue growth.",
+      ],
+    },
+    {
+      company: "PropReturns",
+      href: "https://www.propreturns.com/",
+      location: "Remote",
+      title: "Full Stack & Data Science Engineer",
+      logoUrl: "/propreturns.jpg",
+      start: "Jun 2023",
+      end: "Aug 2023",
+      description: [
+        "Built a Python data pipeline that cleaned web-scraped property data and cut manual data entry by 73%.",
+        "Built a reusable UI component library that made the team ~40% faster and the product more consistent.",
       ],
     },
   ],
   education: [
+    {
+      school: "Birla Institute of Technology & Science, Pilani",
+      href: "https://www.bits-pilani.ac.in/dubai/",
+      degree: "B.Tech, Computer Science Engineering",
+      logoUrl: "/bits.png",
+      start: "2021",
+      end: "2025",
+    },
     {
       school: "Buildspace",
       href: "https://buildspace.so",
@@ -228,70 +211,29 @@ export const DATA = {
       end: "2024",
     },
     {
-      school: "Birla Institute of Technology & Sciences, Pilani",
-      href: "https://www.bits-pilani.ac.in/dubai/",
-      degree: "Bachelor's Degree of Computer Science Engineering(B.Tech)",
-      logoUrl: "/bits.png",
-      start: "2021",
-      end: "2025",
-    },
-    {
       school: "Delhi Private School, Sharjah",
       href: "https://website.dpssharjah.com/",
-      degree: "Secondary Education, till Grade 12-CBSE",
+      degree: "High school (CBSE), through Grade 12",
       logoUrl: "/dps.jpg",
       start: "2007",
       end: "2021",
     },
-    
-  
   ],
   projects: [
     {
-      title: "Image Processing for Crack Detection using XFEM, Machine Learning & Deep Learning Techniques",
-      href: "https://github.com/HUSAM-07/DL-Image-Processing-Crack-Detection",
-      dates: "August 2024 - Jan 2025",
-      active: true,
-      description:
-        "Engineered XFEM-based datasets with diverse defect configurations and trained VGG16 CNN models using transfer learning and supervised techniques to construct crack paths, achieving high accuracy while reducing computational costs of simulations",
-      technologies: [
-        "Python",
-        "Abaqus CAE",
-        "XFEM",
-        "Deep Learning",
-        "CNN",
-        "VGG-16",
-        "Reinforcement Learning",
-        "Machine Learning"
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/HUSAM-07/DL-Image-Processing-Crack-Detection",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: {
-        src: "/Image_CNN.png",
-        width: 1200,
-        height: 630,
-      },
-      video:
-        "",
-    },
-    {
       title: "A Trade A Day",
       href: "https://atradeaday.com",
-      dates: "March 2026 - Present",
+      dates: "Mar 2026 - Present",
       active: true,
       description:
-        "Designed and built a real-time, AI-powered market intelligence PWA that streams live crypto and commodity data, detects technical patterns, and synthesizes quantitative indicators with multi-model analysis into clear, risk-defined trade plans.",
+        "Live crypto and commodity prices go in. A risk-defined trade plan comes out. It streams ticks in real time, spots technical patterns and cross-checks the indicators with multiple AI models.",
       technologies: [
-        "Risk Management",
-        "AI modeling",
-        "Ticks Streaming",
-        "Technical Analysis",
-        "Technical Indicators",
+        "Next.js",
+        "Real-time streaming",
+        "Technical analysis",
+        "Multi-model AI",
+        "Risk management",
+        "PWA",
       ],
       links: [
         {
@@ -300,31 +242,25 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: {
-        src: "/images/atradeaday.png",
-        width: 1200,
-        height: 630,
-      },
-      video:
-        "",
+      image: "/images/atradeaday.png",
+      video: "",
     },
     {
-      title: "UniDash — Founder & Developer",
+      title: "UniDash",
       href: "https://unidash.mohammedhusamuddin.me/",
-      dates: "July 2024 - Present",
+      dates: "Jul 2024 - Present",
       active: true,
       description:
-        "Founded and developed UniDash, a student-centric All-in-One platform using that achieved an average of 2100+ daily active users.",
+        "One dashboard for everything a university student needs, instead of ten open tabs. I founded and built it, and it averages **2,100+ daily active users**.",
       technologies: [
         "Next.js",
-        "Typescript",
-        "NodeJs",
+        "TypeScript",
+        "Node.js",
         "Firebase",
         "Prisma",
-        "TailwindCSS",
         "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "Tailwind CSS",
+        "shadcn/ui",
       ],
       links: [
         {
@@ -338,89 +274,23 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: {
-        src: "/UniDash_Thumbnail.png",
-        width: 1200,
-        height: 630,
-      },
+      image: "/UniDash_Thumbnail.png",
       video: "",
-    },
-    {
-      title: "Insight Hedge",
-      href: "https://insight-hedge.ihusam.tech/",
-      dates: "March 2025 - Present",
-      active: true,
-      description:
-        "An AI-powered hedge fund analysis application built with Next.js and LangChain.js.",
-      technologies: [
-        "OpenAI Agents SDK",
-        "NextJs",
-        "Langchain",
-        "LangGraph",
-        "FastAPI",
-        "Polygon API",
-        "Python",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://insight-hedge.ihusam.tech/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: {
-        src: "/images/insight-hedge.png",
-        width: 1200,
-        height: 630,
-      },
-      video:
-        "",
-    },
-    {
-      title: "Equitum: Visualizing Principle Protected Notes",
-      href: "https://ppn.ihusam.tech/",
-      dates: "May 2023 - June 2023",
-      active: true,
-      description:
-        "An interactive platform to design, simulate, and visualize the engineering behind Principal Protected Notes.",
-      technologies: [
-        "NextJs",
-        "Python",
-        "Pandas",
-        "Finance APIs"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://ppn.ihusam.tech/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: {
-        src: "/images/ppn.png",
-        width: 1200,
-        height: 630,
-      },
-      video:
-        "",
     },
     {
       title: "Gist",
       href: "https://www.gist.ihusam.tech/",
-      dates: "December 2025 - Present",
+      dates: "Dec 2025 - Present",
       active: true,
       description:
-        "Gist is a modern web application that transforms PDF documents into digestible summaries using Google's Gemini AI. It provides both technical and simplified explanations, along with visual concept maps powered by Mermaid diagrams.",
+        "Drop in a PDF and get the gist: a technical summary, a plain-English version and a concept map drawn as a Mermaid diagram. Runs on Gemini.",
       technologies: [
         "Next.js",
-        "Typescript",
-        "NodeJs",
-        "IndexedDB",
-        "Google Gemini API",
+        "TypeScript",
+        "Gemini API",
+        "OpenRouter",
         "Mermaid",
-        "OpenRouter LLM API",
-        "TailwindCSS",
-        "Shadcn UI",
+        "IndexedDB",
       ],
       links: [
         {
@@ -434,30 +304,23 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: {
-        src: "/gist.png",
-        width: 1200,
-        height: 630,
-      },
+      image: "/gist.png",
       video: "",
     },
     {
       title: "Prompt Console",
       href: "https://prompt-console.ihusam.tech/",
-      dates: "December 2025 - Present",
+      dates: "Dec 2025 - Present",
       active: true,
       description:
-        "A prompt engineering console for AI agents, Which is model agnostic and can be used with any LLM.",
+        "A workbench for writing and testing prompts for AI agents. It isn't tied to one model: use OpenAI, Anthropic, Gemini or anything on OpenRouter.",
       technologies: [
         "Next.js",
-        "Typescript",
-        "NodeJs",  
+        "TypeScript",
         "OpenAI",
         "Anthropic",
-        "Google Gemini API",
-        "OpenRouter LLM API",
-        "TailwindCSS",
-        "Shadcn UI",
+        "Gemini API",
+        "OpenRouter",
       ],
       links: [
         {
@@ -471,43 +334,140 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: {
-        src: "/prompt-console.png",
-        width: 1200,
-        height: 630,
-      },
+      image: "/prompt-console.png",
+      video: "",
+    },
+    {
+      title: "Insight Hedge",
+      href: "https://insight-hedge.ihusam.tech/",
+      dates: "Mar 2025 - Present",
+      active: true,
+      description:
+        "Hedge-fund-style analysis on demand. AI agents pull market data from Polygon and write it up as an analysis you can act on.",
+      technologies: [
+        "OpenAI Agents SDK",
+        "LangGraph",
+        "LangChain",
+        "FastAPI",
+        "Next.js",
+        "Polygon API",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://insight-hedge.ihusam.tech/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/images/insight-hedge.png",
+      video: "",
+    },
+    {
+      title: "Equitum",
+      href: "https://ppn.ihusam.tech/",
+      dates: "May 2023 - Jun 2023",
+      active: true,
+      description:
+        "Design a Principal Protected Note, then watch how it behaves. It's an interactive simulator that shows the engineering behind PPNs.",
+      technologies: ["Next.js", "Python", "Pandas", "Finance APIs"],
+      links: [
+        {
+          type: "Website",
+          href: "https://ppn.ihusam.tech/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/images/ppn.png",
+      video: "",
+    },
+    {
+      title: "Crack Detection with Deep Learning",
+      href: "https://github.com/HUSAM-07/DL-Image-Processing-Crack-Detection",
+      dates: "Aug 2024 - Jan 2025",
+      active: true,
+      description:
+        "Trained VGG-16 CNNs with transfer learning on XFEM-simulated defect data to predict crack paths. The accuracy stayed high at a fraction of the simulation cost.",
+      technologies: [
+        "Python",
+        "Deep Learning",
+        "CNN / VGG-16",
+        "XFEM",
+        "Abaqus CAE",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/HUSAM-07/DL-Image-Processing-Crack-Detection",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/Image_CNN.png",
       video: "",
     },
     {
       title: "Security Compliance Dashboard",
       href: "https://www.behance.net/gallery/168506855/Security-Compliance-Dashboard",
-      dates: "April 2023 - September 2023",
+      dates: "Apr 2023 - Sep 2023",
       active: true,
       description:
-        "Developed and designed a working prototype of a security compliance dashboard.",
-      technologies: [
-        "Next.js",
-        "Figma",
-      ],
+        "The MVP I designed and built at Styx: a single view of a company's security compliance status. It helped lift the startup's valuation by 27%.",
+      technologies: ["Next.js", "Figma"],
       links: [
         {
           type: "Design",
           href: "https://www.behance.net/gallery/168506855/Security-Compliance-Dashboard",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://getstyx.io/",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: {
-        src: "/styx.png",
-        width: 1200,
-        height: 630,
-      },
+      image: "/styx.png",
       video: "",
     },
   ],
 
+  writing: {
+    blog: BLOG_URL,
+    newsletter: NEWSLETTER_URL,
+    posts: [
+      {
+        title: "LLMOps: The Missing Playbook",
+        href: `${BLOG_URL}/llmops-missing-playbook`,
+        date: "Feb 2026",
+        summary:
+          "MLOps gave us CI/CD for models. LLMs need something else, from prompt versioning to eval-driven deploys.",
+      },
+      {
+        title: "Dutch Books, Dutching & Why Your Model Is Lying to You",
+        href: `${BLOG_URL}/dutch-books-and-ai-calibration`,
+        date: "Feb 2026",
+        summary:
+          "What 18th-century bookmakers can teach you about LLMs that sound more confident than they are.",
+      },
+      {
+        title: "If Things Aren't Obvious",
+        href: `${BLOG_URL}/if-things-arent-obvious`,
+        date: "Feb 2026",
+        summary:
+          "The third wave of the internet, the death of SaaS, and what it means to build in 2026.",
+      },
+      {
+        title: "Arbitrage: The Art of Risk-Free Profit",
+        href: `${BLOG_URL}/arbitrage-the-art-of-risk-free-profit`,
+        date: "Feb 2026",
+        summary:
+          "How traders find and exploit price gaps across markets, and the math that makes the profit risk-free.",
+      },
+      {
+        title: "Building and Deploying with Docker: A Layman's Guide",
+        href: `${BLOG_URL}/docker101`,
+        date: "Feb 2025",
+        summary: "Docker from first principles, written for anyone who has nodded along without really getting it.",
+      },
+      {
+        title: "Building Leverage",
+        href: `${BLOG_URL}/building-leverage`,
+        date: "Sep 2024",
+        summary: "One shift in what you work on that multiplies the impact of everything else.",
+      },
+    ],
+  },
 } as const;

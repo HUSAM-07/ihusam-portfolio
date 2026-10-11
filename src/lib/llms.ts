@@ -72,8 +72,9 @@ function writingSection() {
   return [
     "## Writing",
     "",
-    `- [Blog](${DATA.writing.blog}): essays and technical notes on AI, engineering and building products`,
+    `- [Blog](${DATA.writing.blog}): essays and technical notes on AI engineering, markets and building products`,
     `- [Value Vault newsletter](${DATA.writing.newsletter}): essays on whatever he finds interesting`,
+    ...DATA.writing.posts.map((p) => `- [${p.title}](${p.href}): ${p.summary} (${p.date})`),
     "",
   ];
 }
@@ -93,7 +94,7 @@ export function buildLlmsTxt() {
     ...contactSection(),
     "## Optional",
     "",
-    `- [Projects index](https://projects.ihusam.tech/)`,
+    `- [Projects index](https://projects.ihusam.tech/): write-ups of the problem, approach and product behind each project`,
     "",
   ].join("\n");
 }
@@ -111,7 +112,7 @@ export function buildLlmsFullTxt() {
     "",
     "## Skills",
     "",
-    DATA.skills.join(", "),
+    DATA.skills.map((s) => s.name).join(", "),
     "",
     ...writingSection(),
     ...contactSection(),
