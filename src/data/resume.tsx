@@ -4,8 +4,40 @@ import Image from 'next/image';
 
 export const DATA = {
   name: "Husam",
+  fullName: "Mohammed Husamuddin",
   initials: "MHD",
   url: "https://www.mohusam.com",
+  // Plain-language positioning used for metadata, JSON-LD and /llms.txt (what search engines and agents read).
+  jobTitle: "AI Engineer",
+  headline:
+    "Product builder turned AI engineer and software engineer, building AI agents and tools at Deriv in Dubai, who also writes about whatever interests him.",
+  bio: [
+    "Mohammed Husamuddin (Husam) is an AI engineer and software engineer based in Dubai, U.A.E. He started as a product builder: shipping products end to end, from idea and design to code, launch and users.",
+    "Today he leads applied-AI work as an AI Engineer at Deriv, building AI tools and agents that internal teams use to solve problems and speed up how they deliver.",
+    "He keeps shipping his own products too: UniDash (a student all-in-one platform with 2,100+ daily active users), A Trade A Day (a real-time AI market-intelligence PWA), Gist (AI PDF summaries), Prompt Console (a model-agnostic prompt-engineering console) and Insight Hedge (an AI hedge-fund analysis app).",
+    "He is also a writer who writes about whatever interests him: AI, engineering, building products, markets and ideas, on his blog and his newsletter, Value Vault.",
+  ],
+  keywords: [
+    "AI engineer",
+    "senior AI engineer",
+    "LLM engineer",
+    "AI agents",
+    "applied AI",
+    "software engineer",
+    "product builder",
+    "builder",
+    "founding engineer",
+    "full-stack engineer",
+    "Next.js",
+    "Python",
+    "writer",
+    "Dubai",
+    "UAE",
+  ],
+  writing: {
+    blog: "https://ihusam.tech/",
+    newsletter: "https://valuevault.beehiiv.com/",
+  },
   location: "Dubai, U.A.E",
   locationLink: "https://www.google.com/maps/place/Dubai",
   description:

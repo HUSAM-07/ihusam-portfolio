@@ -17,6 +17,59 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Person",
+                "@id": `${DATA.url}/#person`,
+                name: DATA.fullName,
+                alternateName: DATA.name,
+                url: DATA.url,
+                image: `${DATA.url}${DATA.avatarUrl}`,
+                jobTitle: DATA.jobTitle,
+                description: DATA.headline,
+                email: `mailto:${DATA.contact.email}`,
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Dubai",
+                  addressCountry: "AE",
+                },
+                worksFor: {
+                  "@type": "Organization",
+                  name: DATA.work[0].company,
+                  url: DATA.work[0].href,
+                },
+                alumniOf: DATA.education.map((e) => ({
+                  "@type": "EducationalOrganization",
+                  name: e.school,
+                  url: e.href,
+                })),
+                knowsAbout: [...DATA.keywords, ...DATA.skills],
+                sameAs: [
+                  DATA.contact.social.GitHub.url,
+                  DATA.contact.social.LinkedIn.url,
+                  DATA.contact.social.X.url,
+                  DATA.writing.blog,
+                  DATA.writing.newsletter,
+                ],
+              },
+              {
+                "@type": "WebSite",
+                "@id": `${DATA.url}/#website`,
+                url: DATA.url,
+                name: DATA.fullName,
+                description: DATA.headline,
+                author: { "@id": `${DATA.url}/#person` },
+              },
+            ],
+          }),
+        }}
+      />
       <section id="hero">
         <DotPattern className="fixed inset-x-0 top-0 z-0 h-40 w-full fill-neutral-400/35 [mask-image:linear-gradient(to_bottom,black,transparent)] dark:fill-neutral-500/20" />
         <div className="relative z-10 mx-auto w-full max-w-2xl space-y-8">
