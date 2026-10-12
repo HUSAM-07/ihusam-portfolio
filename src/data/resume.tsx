@@ -463,11 +463,18 @@ I still ship my own things. [A Trade A Day](https://atradeaday.com) turns live m
     newsletter: NEWSLETTER_URL,
     posts: [
       {
-        title: "LLMOps: The Missing Playbook",
-        href: `${BLOG_URL}/llmops-missing-playbook`,
+        title: "Agent Experience",
+        href: `${BLOG_URL}/agent-experience`,
+        date: "Oct 2026",
+        summary:
+          "UX is for people, DX is for developers, AX is for agents. Why setting agents up for success deserves far more of our time.",
+      },
+      {
+        title: "Arbitrage: The Art of Risk-Free Profit",
+        href: `${BLOG_URL}/arbitrage-the-art-of-risk-free-profit`,
         date: "Feb 2026",
         summary:
-          "MLOps gave us CI/CD for models. LLMs need something else, from prompt versioning to eval-driven deploys.",
+          "How traders find and exploit price gaps across markets, and the math that makes the profit risk-free.",
       },
       {
         title: "Dutch Books, Dutching & Why Your Model Is Lying to You",
@@ -484,23 +491,22 @@ I still ship my own things. [A Trade A Day](https://atradeaday.com) turns live m
           "The third wave of the internet, the death of SaaS, and what it means to build in 2026.",
       },
       {
-        title: "Arbitrage: The Art of Risk-Free Profit",
-        href: `${BLOG_URL}/arbitrage-the-art-of-risk-free-profit`,
-        date: "Feb 2026",
-        summary:
-          "How traders find and exploit price gaps across markets, and the math that makes the profit risk-free.",
-      },
-      {
-        title: "Building and Deploying with Docker: A Layman's Guide",
-        href: `${BLOG_URL}/docker101`,
-        date: "Feb 2025",
-        summary: "Docker from first principles, written for anyone who has nodded along without really getting it.",
+        title: "Particle Filters in Robotics",
+        href: `${BLOG_URL}/particle-filter`,
+        date: "Oct 2024",
+        summary: "The key formulas behind particle filters, from Bayes' rule to resampling, in plain language.",
       },
       {
         title: "Building Leverage",
         href: `${BLOG_URL}/building-leverage`,
         date: "Sep 2024",
         summary: "One shift in what you work on that multiplies the impact of everything else.",
+      },
+      {
+        title: "Overcomplication and Action",
+        href: `${BLOG_URL}/complication`,
+        date: "Sep 2024",
+        summary: "Why the basics are enough to start, and why action beats overthinking.",
       },
     ],
   },
